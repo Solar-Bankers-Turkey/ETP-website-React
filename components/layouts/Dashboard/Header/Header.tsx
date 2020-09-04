@@ -7,6 +7,7 @@ import BatteryIcon from '../../../icons/BatteryIcon'
 import QuestionIcon from '../../../icons/QuestionIcon'
 import MailIcon from '../../../icons/MailIcon'
 import BellIcon from '../../../icons/BellIcon'
+import IconButton from '../../../Button/IconButton'
 
 const Header = () => {
   return (
@@ -37,15 +38,9 @@ const Header = () => {
         </div>
       </div>
       <div className={styles.btn_group}>
-        <div className={styles.icon_button}>
-          <QuestionIcon></QuestionIcon>
-        </div>
-        <div className={styles.icon_button}>
-          <MailIcon></MailIcon>
-        </div>
-        <div className={styles.icon_button}>
-          <BellIcon></BellIcon>
-        </div>
+        <IconButton icon={<QuestionIcon />}></IconButton>
+        <IconButton icon={<MailIcon />}></IconButton>
+        <IconButton badge={true} icon={<BellIcon />}></IconButton>
         <div className={styles.btn_username}>Username</div>
       </div>
     </div>

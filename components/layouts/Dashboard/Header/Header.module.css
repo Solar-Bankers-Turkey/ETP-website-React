@@ -2,7 +2,7 @@
   grid-area: db-header;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-right: 2rem;
 }
@@ -18,9 +18,11 @@
 }
 
 .coin_container {
+  margin-left: 4rem;
+  flex: 1;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -61,9 +63,10 @@
 }
 
 .energy_container {
+  flex: 1;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .solar_icon {
@@ -120,22 +123,16 @@
 }
 
 .btn_group {
+  margin-left: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-.icon_button {
-  cursor: pointer;
-  color: var(--icon-color);
-  height: 24px;
-  width: 24px;
-  margin-right: 1rem;
-  & > svg {
-    height: 100%;
-    width: 100%;
+  & > div {
+    margin-right: 1rem;
   }
 }
+
 .btn_username {
   cursor: pointer;
   color: var(--text-color-secondary-light);

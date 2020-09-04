@@ -1,0 +1,27 @@
+.container {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  color: var(--icon-color);
+  & > svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.badge {
+  background: var(--primary-color);
+  color: white;
+  position: absolute;
+
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  top: 6px;
+  right: 4px;
+  transform: scale(1) translate(50%, -50%);
+  transform-origin: 100% 0%;
+}
