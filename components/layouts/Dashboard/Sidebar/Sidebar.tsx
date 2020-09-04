@@ -9,7 +9,7 @@ import ListIcon from '../../../icons/ListIcon'
 import RefreshIcon from '../../../icons/RefreshIcon'
 import SettingsIcon from '../../../icons/SettingsIcon'
 import ChainIcon from '../../../icons/ChainIcon'
-import SolarPanel from '../../../icons/SolarPanel'
+import SolarPanelIcon from '../../../icons/SolarPanelIcon'
 
 const Sidebar = () => {
   return (
@@ -28,7 +28,7 @@ const Sidebar = () => {
         <ul className={styles.nav_list}>
           <NavLink icon={<HomeIcon />} url={dashboardLinks.overview.url} text={dashboardLinks.overview.name}></NavLink>
           <NavLink
-            icon={<SolarPanel />}
+            icon={<SolarPanelIcon />}
             url={dashboardLinks.energy_market.url}
             text={dashboardLinks.energy_market.name}
           ></NavLink>

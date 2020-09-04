@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SolarPanel = () => {
+const SolarPanelIcon = () => {
   return (
     <svg
       style={{ marginTop: '1px' }}
@@ -20,4 +20,4 @@ const SolarPanel = () => {
   )
 }
 
-export default SolarPanel
+export default SolarPanelIcon
