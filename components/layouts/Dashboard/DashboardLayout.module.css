@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 64px 1fr 64px;
+  gap: 2em 2em;
+  grid-template-areas:
+    'db-sidebar db-header'
+    'db-sidebar db-content'
+    'db-footer db-footer';
+}
+
+.content {
+  grid-area: db-content;
+}
+
+.header {
+  grid-area: db-header;
+}
+
+.footer {
+  grid-area: db-footer;
+}
+
+.sidebar {
+  grid-area: db-sidebar;
+}

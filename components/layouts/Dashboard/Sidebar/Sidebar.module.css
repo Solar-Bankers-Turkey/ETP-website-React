@@ -1,0 +1,77 @@
+.container {
+  grid-area: db-sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  & > * {
+    width: 100%;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  & > .profile_img {
+    width: 6em;
+    height: 6em;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.25rem;
+  }
+  & > .profile_subtitle {
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+}
+
+.nav_list_item {
+  & > a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
+  }
+  & > a > .nav_list_item_icon {
+    margin: 0 1.5rem;
+
+    height: 1rem;
+    width: 1rem;
+    & > svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  border-left: 0.5rem solid transparent;
+  background: transparent;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.selected {
+  border-left: 0.5rem solid var(--primary-color);
+  background: var(--bg-color-primary-dark);
+}
