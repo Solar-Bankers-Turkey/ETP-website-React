@@ -1,9 +1,8 @@
 import React from 'react'
-import DashboardLayout from '../../../components/layouts/Dashboard/DashboardLayout'
+import Solarnode from './_Solarnode'
 
 const index = () => {
-  return <div>solar-node</div>
+  return <Solarnode></Solarnode>
 }
 
-index.Layout = DashboardLayout
 export default index

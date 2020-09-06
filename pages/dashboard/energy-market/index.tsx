@@ -1,9 +1,8 @@
 import React from 'react'
-import DashboardLayout from '../../../components/layouts/Dashboard/DashboardLayout'
+import EnergyMarket from './_EnergyMarket'
 
 const index = () => {
-  return <div>energy-market</div>
+  return <EnergyMarket />
 }
 
-index.Layout = DashboardLayout
 export default index

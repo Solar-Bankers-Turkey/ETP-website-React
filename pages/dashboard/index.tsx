@@ -1,9 +1,9 @@
 import React from 'react'
 import DashboardLayout from '../../components/layouts/Dashboard/DashboardLayout'
+import Overview from './overview/_Overview'
 
 const index = () => {
   return <div>overview</div>
 }
 
-index.Layout = DashboardLayout
 export default index

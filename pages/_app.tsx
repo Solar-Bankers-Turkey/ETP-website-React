@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import '../styles/app.css'
-import { Fragment } from 'react'
+import { useRouter } from 'next/router'
+import DashboardLayout from '../components/layouts/Dashboard/DashboardLayout'
 
 const DefaultLayout = ({ children }) => (
   <div className="default-container">
@@ -17,8 +18,12 @@ const DefaultLayout = ({ children }) => (
   </div>
 )
 function MyApp({ Component, pageProps }) {
-  const Layout = Component.Layout || DefaultLayout
-
+  const router = useRouter()
+  const page = router.pathname.split('/')[1]
+  let Layout = DashboardLayout
+  if (page !== 'dashboard') {
+    Layout = DefaultLayout
+  }
   return (
     <>
       <Head>
