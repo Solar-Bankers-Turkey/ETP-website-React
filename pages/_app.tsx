@@ -18,12 +18,12 @@ const DefaultLayout = ({ children }) => (
   </div>
 )
 function MyApp({ Component, pageProps }) {
-  const router = useRouter()
-  const page = router.pathname.split('/')[1]
+  // const router = useRouter()
+  // const page = router.pathname.split('/')[1]
+  // if (page !== 'dashboard') {
+  //   Layout = DefaultLayout
+  // }
   let Layout = DashboardLayout
-  if (page !== 'dashboard') {
-    Layout = DefaultLayout
-  }
   return (
     <>
       <Head>

@@ -13,6 +13,7 @@ const DonutChart = () => {
       <h1 className={styles.chart_header}>Energy Usage</h1>
       <div className={styles.chart}>
         <PieChart
+          radius={PieChart.defaultProps.radius - 6}
           segmentsStyle={{ transition: 'stroke .3s', cursor: 'pointer' }}
           animate
           style={{
@@ -35,9 +36,8 @@ const DonutChart = () => {
       </div>
       <div className={styles.legend}>
         {dataMock.map((e: any) => {
-          console.log(e)
           return (
-            <div className={styles.legend_item}>
+            <div key={e.title} className={styles.legend_item}>
               <div style={{ background: e.color }} className={styles.legend_marker}></div>
               <div className={styles.legend_name}>{e.title}</div>
               <div className={styles.legend_value}>{e.value}%</div>
