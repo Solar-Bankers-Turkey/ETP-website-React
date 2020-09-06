@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 64px 300px 1fr;
+  grid-template-areas:
+    'o-header o-header'
+    'o-chart1 o-chart2'
+    'o-info o-info';
+}
+
+.header {
+  grid-area: o-header;
+}
+
+.chart1 {
+  grid-area: o-chart1;
+}
+
+.chart2 {
+  grid-area: o-chart2;
+}
+
+.info {
+  grid-area: o-info;
+}
