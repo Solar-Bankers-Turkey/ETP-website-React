@@ -50,3 +50,7 @@ ol,
 ul {
   list-style: none;
 }
+
+button:hover {
+  background: white;
+}
