@@ -54,3 +54,16 @@ ul {
 button:hover {
   background: white;
 }
+
+html::-webkit-scrollbar {
+  width: 8px;
+  padding: 0;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #1f8cfa8f;
+}
+html::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background-color: var(--bg-color-primary);
+}
