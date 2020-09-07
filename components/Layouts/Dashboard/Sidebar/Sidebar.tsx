@@ -34,10 +34,9 @@ const Sidebar = () => {
           ></NavLink>
           <NavLink
             icon={<StatisticIcon />}
-            url={dashboardLinks.analytics.url}
-            text={dashboardLinks.analytics.name}
+            url={dashboardLinks.iot_device_stauts.url}
+            text={dashboardLinks.iot_device_stauts.name}
           ></NavLink>
-          <NavLink icon={<ListIcon />} url={dashboardLinks.rules.url} text={dashboardLinks.rules.name}></NavLink>
           <NavLink icon={<RefreshIcon />} url={dashboardLinks.history.url} text={dashboardLinks.history.name}></NavLink>
           <NavLink
             icon={<SettingsIcon />}

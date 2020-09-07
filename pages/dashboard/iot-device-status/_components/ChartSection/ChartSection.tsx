@@ -25,6 +25,7 @@ const ChartSection = () => {
           </Button>
         </div>
       </div>
+
       <div className={styles.charts_group}>
         <div className={styles.donut_section}>
           <DonutChart name="Living Room" valuePercentage={20} valueText="1034" color="#0cb680" />
@@ -33,8 +34,10 @@ const ChartSection = () => {
           <DonutChart name="Living Room" valuePercentage={20} valueText="1034" color="#784097" />
         </div>
 
-        <div className={styles.line_container}>
-          <LineChart />
+        <div style={{ overflow: 'hidden', width: '100%', position: 'relative' }}>
+          <div className={styles.line_container}>
+            <LineChart />
+          </div>
         </div>
       </div>
     </div>
