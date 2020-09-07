@@ -7,7 +7,7 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 const LineChart = React.memo(function LineChart() {
   const series = useRef(data.series)
   const options = useRef(data.options)
-  return <Chart options={options.current} series={series.current} type="line" width="100%" height="100%" />
+  return <Chart options={options.current} series={series.current} type="line" width="100%" height="500px" />
 })
 
 export default LineChart

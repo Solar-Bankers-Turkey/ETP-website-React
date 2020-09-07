@@ -19,9 +19,9 @@ const Table = ({ rowData, headData, action }: Props) => {
           ))}
         </header>
 
-        {rowData.map((k: any) => {
+        {rowData.map((k: any, i: any) => {
           return (
-            <div className={styles.row}>
+            <div className={styles.row} key={i}>
               {k.map((e: any, i: number) => {
                 return (
                   <div className={styles.row_item} key={i}>
