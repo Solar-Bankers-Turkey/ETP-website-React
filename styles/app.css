@@ -61,10 +61,6 @@ ul {
   list-style: none;
 }
 
-button:hover {
-  background: white;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   padding: 0;

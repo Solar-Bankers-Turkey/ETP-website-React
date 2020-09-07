@@ -4,7 +4,7 @@ export const dashboardLinks = {
     name: 'Overview',
   },
   energy_market: { url: '/dashboard/energy-market', name: 'Energy Market' },
-  analytics: { url: '/dashboard/analytics', name: 'Analytics' },
+  analytics: { url: '/dashboard/iot-device-status', name: 'IOT Device Status' },
   rules: { url: '/dashboard/rules', name: 'Rules' },
   history: { url: '/dashboard/history', name: 'History' },
   settings: { url: '/dashboard/settings', name: 'Settings' },

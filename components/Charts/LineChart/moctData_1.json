@@ -1,0 +1,71 @@
+{
+  "series": [
+    { "data": [100, 400, 500, 300, 200, 500, 400], "name": "Living Room" },
+    { "data": [50, 200, 100, 300, 200, 600, 400], "name": "Studio" },
+
+    {
+      "data": [300, 120, 503, 330, 200, 230, 120],
+      "name": "Kid's room"
+    },
+    {
+      "data": [201, 130, 350, 200, 444, 244, 300],
+      "name": "Kitchen"
+    }
+  ],
+  "options": {
+    "chart": {
+      "type": "line",
+      "zoom": {
+        "enabled": false
+      },
+      "toolbar": {
+        "show": false
+      },
+      "foreColor": "#869AAC",
+      "height": 430
+    },
+    "tooltip": {
+      "theme": "dark"
+    },
+    "dataLabels": {
+      "enabled": false
+    },
+    "stroke": {
+      "curve": "straight",
+      "width": 1.9
+    },
+    "grid": {
+      "xaxis": {
+        "lines": {
+          "show": true
+        }
+      },
+      "borderColor": "#20293c"
+    },
+    "xaxis": {
+      "categories": ["Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "axisBorder": {
+        "show": true,
+        "color": "#20293c"
+      },
+      "axisTicks": {
+        "show": false
+      },
+      "crosshairs": {
+        "show": true,
+        "width": 1,
+        "position": "back",
+        "opacity": 0.9,
+        "stroke": {
+          "color": "#1f8efa",
+          "width": 1.5,
+          "dashArray": 0
+        },
+        "fill": {
+          "type": "solid",
+          "color": "red"
+        }
+      }
+    }
+  }
+}

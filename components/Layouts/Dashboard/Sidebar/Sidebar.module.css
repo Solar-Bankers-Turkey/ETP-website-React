@@ -79,4 +79,5 @@
 .selected {
   border-left: 0.5rem solid var(--primary-color);
   background: var(--bg-color-primary-darker);
+  color: var(--primary-color);
 }
