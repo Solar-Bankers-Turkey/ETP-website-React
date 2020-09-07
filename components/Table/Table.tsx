@@ -1,31 +1,41 @@
 import React from 'react'
-import { mockData } from './mockData'
 import styles from './Table.module.css'
-const Table = () => {
+
+interface Props {
+  action?: boolean
+  rowData: string[][]
+  headData: string[]
+}
+
+const Table = ({ rowData, headData, action }: Props) => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <div className={styles.header_item}>Seller</div>
-          <div className={styles.header_item}>Location</div>
-          <div className={styles.header_item}>Supply</div>
-          <div className={styles.header_item}>Price</div>
-          <div className={styles.header_item}>Date</div>
+          {headData.map(e => (
+            <div className={styles.header_item} key={e}>
+              {e}
+            </div>
+          ))}
         </header>
 
-        {mockData.map((e: any, i: number) => {
+        {rowData.map((k: any) => {
           return (
-            <div key={i} className={styles.row}>
-              <div className={styles.row_item}>{e.seller}</div>
-              <div className={styles.row_item}>{e.location}</div>
-              <div className={styles.row_item}>{e.supply}</div>
-              <div className={styles.row_item}>{e.price}</div>
-              <div className={styles.row_item}>{e.date}</div>
-              <div className={styles.row_item}>
-                <button className={styles.btn_buy}>
-                  <span>BUY</span>
-                </button>
-              </div>
+            <div className={styles.row}>
+              {k.map((e: any, i: number) => {
+                return (
+                  <div className={styles.row_item} key={i}>
+                    {e}
+                  </div>
+                )
+              })}
+              {action && (
+                <div className={styles.row_item}>
+                  <button className={styles.btn_buy}>
+                    <span>BUY</span>
+                  </button>
+                </div>
+              )}
             </div>
           )
         })}

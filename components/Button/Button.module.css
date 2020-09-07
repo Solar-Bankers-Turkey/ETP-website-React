@@ -1,0 +1,37 @@
+.container {
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: 600;
+  border-radius: 4px;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  min-width: 64px;
+  height: 30px;
+  text-align: center;
+
+  letter-spacing: 1.5px;
+  color: var(--primary-color);
+  background-color: var(--bg-color-secondary-light);
+  & > span {
+    display: block;
+  }
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition: background-color, transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  &:hover {
+    background-color: var(--bg-color-secondary);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+  &:focus {
+    background-color: var(--bg-color-secondary);
+  }
+  outline: none;
+}

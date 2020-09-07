@@ -2,6 +2,7 @@ import React from 'react'
 import Table from '../../../components/Table/Table'
 import FabButton from '../../../components/Button/FabButton'
 import styles from './EnergyMarket.module.css'
+import mockData from './mockData.json'
 
 const EnergyMarket = () => {
   return (
@@ -10,7 +11,7 @@ const EnergyMarket = () => {
         <h1>Energy Market</h1>
         <FabButton />
       </div>
-      <Table></Table>
+      <Table rowData={mockData.rowData} headData={mockData.headData} action={true}></Table>
     </>
   )
 }

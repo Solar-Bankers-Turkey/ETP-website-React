@@ -1,6 +1,6 @@
 import React from 'react'
 import { PieChart } from 'react-minimal-pie-chart'
-import styles from './IotDeviceStatus.module.css'
+import styles from './ChartsSection.module.css'
 
 interface Props {
   valuePercentage: number
@@ -9,13 +9,13 @@ interface Props {
   color: string
 }
 
-const DonutChart = ({ valuePercentage, valueText, name, color }: Props) => {
+const DonutChart = React.memo(function DonutChart({ valuePercentage, valueText, name, color }: Props) {
   return (
     <>
       <div className={styles.donut_container}>
         <div className={styles.donut}>
           <PieChart
-            radius={PieChart.defaultProps.radius - 8}
+            radius={PieChart.defaultProps.radius}
             data={[{ value: valuePercentage, color: color }]}
             background="#3e4e6c"
             totalValue={100}
@@ -37,6 +37,6 @@ const DonutChart = ({ valuePercentage, valueText, name, color }: Props) => {
       </div>
     </>
   )
-}
+})
 
 export default DonutChart
