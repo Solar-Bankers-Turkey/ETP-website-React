@@ -1,9 +1,11 @@
 :root {
   --primary-color: #1f8efa;
+  --primary-color-opacity: #1f8cfac4;
 
   --bg-color-primary: #242e42;
   --bg-color-primary-light: #293449;
   --bg-color-primary-dark: #20293c;
+  --bg-color-primary-darker: #131a27;
 
   --bg-color-secondary: #2f3b52;
   --bg-color-secondary-light: #3e4e6c;

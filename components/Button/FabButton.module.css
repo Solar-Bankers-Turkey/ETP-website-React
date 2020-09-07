@@ -1,0 +1,29 @@
+.container {
+  min-width: 40px;
+  min-height: 40px;
+
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  -webkit-tap-highlight-color: transparent;
+
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  &:hover {
+    background: var(--primary-color-opacity);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+
+  & > svg {
+    color: var(--text-color-primary);
+    width: 24px;
+    height: 24px;
+    user-select: none;
+  }
+}

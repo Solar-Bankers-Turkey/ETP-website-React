@@ -3,9 +3,11 @@ import styles from './DashboardLayout.module.css'
 import Header from './Header/Header'
 import Sidebar from './Sidebar/Sidebar'
 import cx from 'classnames'
+import { useRouter } from 'next/router'
 
 const DashboardLayout = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(true)
+  const router = useRouter()
 
   const sidebarToggleHandler = () => {
     setSidebarOpen(!isSidebarOpen)
@@ -32,7 +34,6 @@ const DashboardLayout = ({ children }) => {
       <div className={cx(styles.sidebar)}>
         <Sidebar></Sidebar>
       </div>
-
       <main className={styles.content}>{children}</main>
 
       <footer className={styles.footer}></footer>

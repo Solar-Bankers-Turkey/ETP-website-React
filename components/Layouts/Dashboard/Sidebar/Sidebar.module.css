@@ -39,7 +39,9 @@
     font-size: 0.875rem;
   }
 }
-
+.nav_list {
+  padding-right: 0.75rem;
+}
 .nav_list_item {
   white-space: nowrap;
   & > a {
@@ -76,5 +78,5 @@
 
 .selected {
   border-left: 0.5rem solid var(--primary-color);
-  background: var(--bg-color-primary-dark);
+  background: var(--bg-color-primary-darker);
 }
