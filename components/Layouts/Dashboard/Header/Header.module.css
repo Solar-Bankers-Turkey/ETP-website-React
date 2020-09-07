@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 940px) {
   .info_container {
     display: none !important;
   }

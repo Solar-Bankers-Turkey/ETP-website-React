@@ -1,5 +1,5 @@
 import React from 'react'
-import DashboardLayout from '../../../components/layouts/Dashboard/DashboardLayout'
+import DashboardLayout from '../../../components/Layouts/Dashboard/DashboardLayout'
 import Settings from './_Settings'
 
 const index = () => {

@@ -1,0 +1,68 @@
+.container {
+  margin-top: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.item {
+  padding-left: 2rem;
+  padding-right: 1rem;
+  color: var(--text-color-primary);
+  margin-bottom: 1rem;
+  border: 1px solid var(--bg-border-color-soft);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 48px;
+  max-height: fit-content;
+  background: var(--bg-color-primary-dark);
+}
+
+.icon {
+  margin-right: 2rem;
+  margin-bottom: 4px;
+  min-height: 16px;
+  min-width: 16px;
+  max-width: 16px;
+  max-height: 16px;
+  & > * {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.date {
+  margin-right: 2rem;
+  color: var(--text-color-secondary-dark);
+  font-size: 0.75rem;
+}
+.text {
+  margin-right: 0.5rem;
+  padding: 0.25rem 0;
+  font-size: 0.75rem;
+  flex: 1;
+}
+
+.threeDot {
+  cursor: pointer;
+  margin-bottom: 12px !important;
+  color: var(--text-color-secondary);
+  margin-bottom: 4px;
+  min-height: 6px;
+  min-width: 6px;
+  max-width: 6px;
+  max-height: 6px;
+  & > * {
+    min-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import '../styles/app.css'
 import { useRouter } from 'next/router'
-import DashboardLayout from '../components/layouts/Dashboard/DashboardLayout'
+import DashboardLayout from '../components/Layouts/Dashboard/DashboardLayout'
 
 const DefaultLayout = ({ children }) => (
   <div className="default-container">

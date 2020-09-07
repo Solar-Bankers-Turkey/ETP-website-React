@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Overview.module.css'
 import DonutChart from '../../../components/Charts/DonutChart/DonutChart'
 import PillChart from '../../../components/Charts/PillChart/PillChart'
+import NotificationList from '../../../components/NotificationList/NotificationList'
 const Overview = () => {
   return (
     <div className={styles.container}>
@@ -15,7 +16,9 @@ const Overview = () => {
         <PillChart />
       </div>
 
-      <div className={styles.info}></div>
+      <div className={styles.info}>
+        <NotificationList />
+      </div>
     </div>
   )
 }

@@ -12,11 +12,13 @@
   --text-color-primary: #ffffff;
   --text-color-secondary: #98a7b9;
   --text-color-secondary-light: #cfd7db;
+  --text-color-secondary-dark: #70889e;
 
   --warning-color: #ffab4f;
   --success-color: #ffab4f;
 
   --bg-border-color-dark: #000000;
+  --bg-border-color-soft: #00000025;
 
   --orange: #ffab4f;
   --green: #05c985;
