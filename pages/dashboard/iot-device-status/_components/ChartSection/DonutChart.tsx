@@ -15,7 +15,7 @@ const DonutChart = React.memo(function DonutChart({ valuePercentage, valueText, 
       <div className={styles.donut_container}>
         <div className={styles.donut}>
           <PieChart
-            radius={PieChart.defaultProps.radius}
+            radius={PieChart.defaultProps.radius - 12}
             data={[{ value: valuePercentage, color: color }]}
             background="#3e4e6c"
             totalValue={100}

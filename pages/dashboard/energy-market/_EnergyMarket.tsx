@@ -6,13 +6,13 @@ import mockData from './mockData.json'
 
 const EnergyMarket = () => {
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.header}>
         <h1>Energy Market</h1>
         <FabButton />
       </div>
       <Table rowData={mockData.rowData} headData={mockData.headData} action={true}></Table>
-    </>
+    </div>
   )
 }
 

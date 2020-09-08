@@ -1,71 +1,138 @@
-{
-  "series": [
-    { "data": [100, 400, 500, 300, 200, 500, 400], "name": "Living Room" },
-    { "data": [50, 200, 100, 300, 200, 600, 400], "name": "Studio" },
-
-    {
-      "data": [300, 120, 503, 330, 200, 230, 120],
-      "name": "Kid's room"
-    },
-    {
-      "data": [201, 130, 350, 200, 444, 244, 300],
-      "name": "Kitchen"
-    }
-  ],
-  "options": {
-    "chart": {
-      "type": "line",
-      "zoom": {
-        "enabled": false
+[
+  {
+    "id": "Living Room",
+    "color": "#0cb680",
+    "data": [
+      {
+        "x": "Monday",
+        "y": 100
       },
-      "toolbar": {
-        "show": false
+      {
+        "x": "Tuesday",
+        "y": 400
       },
-      "foreColor": "#869AAC",
-      "height": 430
-    },
-    "tooltip": {
-      "theme": "dark"
-    },
-    "dataLabels": {
-      "enabled": false
-    },
-    "stroke": {
-      "curve": "straight",
-      "width": 1.9
-    },
-    "grid": {
-      "xaxis": {
-        "lines": {
-          "show": true
-        }
+      {
+        "x": "Wednesday",
+        "y": 500
       },
-      "borderColor": "#20293c"
-    },
-    "xaxis": {
-      "categories": ["Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "axisBorder": {
-        "show": true,
-        "color": "#20293c"
+      {
+        "x": "Thursday",
+        "y": 300
       },
-      "axisTicks": {
-        "show": false
+      {
+        "x": "Friday",
+        "y": 200
       },
-      "crosshairs": {
-        "show": true,
-        "width": 1,
-        "position": "back",
-        "opacity": 0.9,
-        "stroke": {
-          "color": "#1f8efa",
-          "width": 1.5,
-          "dashArray": 0
-        },
-        "fill": {
-          "type": "solid",
-          "color": "red"
-        }
+      {
+        "x": "Saturday",
+        "y": 500
+      },
+      {
+        "x": "Sunday",
+        "y": 400
       }
-    }
+    ]
+  },
+  {
+    "id": "Studio",
+    "color": "#e19c52",
+    "data": [
+      {
+        "x": "Monday",
+        "y": 50
+      },
+      {
+        "x": "Tuesday",
+        "y": 200
+      },
+      {
+        "x": "Wednesday",
+        "y": 100
+      },
+      {
+        "x": "Thursday",
+        "y": 300
+      },
+      {
+        "x": "Friday",
+        "y": 200
+      },
+      {
+        "x": "Saturday",
+        "y": 600
+      },
+      {
+        "x": "Sunday",
+        "y": 400
+      }
+    ]
+  },
+  {
+    "id": "Kid's room",
+    "color": "#784097",
+    "data": [
+      {
+        "x": "Monday",
+        "y": 300
+      },
+      {
+        "x": "Tuesday",
+        "y": 100
+      },
+      {
+        "x": "Wednesday",
+        "y": 503
+      },
+      {
+        "x": "Thursday",
+        "y": 330
+      },
+      {
+        "x": "Friday",
+        "y": 200
+      },
+      {
+        "x": "Saturday",
+        "y": 230
+      },
+      {
+        "x": "Sunday",
+        "y": 120
+      }
+    ]
+  },
+  {
+    "id": "Kitchen",
+    "color": "#d24342",
+    "data": [
+      {
+        "x": "Monday",
+        "y": 201
+      },
+      {
+        "x": "Tuesday",
+        "y": 130
+      },
+      {
+        "x": "Wednesday",
+        "y": 350
+      },
+      {
+        "x": "Thursday",
+        "y": 200
+      },
+      {
+        "x": "Friday",
+        "y": 444
+      },
+      {
+        "x": "Saturday",
+        "y": 244
+      },
+      {
+        "x": "Sunday",
+        "y": 300
+      }
+    ]
   }
-}
+]

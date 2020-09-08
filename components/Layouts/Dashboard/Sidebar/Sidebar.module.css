@@ -4,6 +4,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 100%;
+  width: 240px;
   & > * {
     width: 100%;
   }
@@ -35,6 +36,7 @@
     margin-bottom: 0.25rem;
   }
   & > .profile_subtitle {
+    white-space: nowrap;
     font-weight: 600;
     font-size: 0.875rem;
   }
