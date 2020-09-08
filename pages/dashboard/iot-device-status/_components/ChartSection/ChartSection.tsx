@@ -36,7 +36,7 @@ const ChartSection = () => {
           </div>
 
           <div className={styles.line_section}>
-            <LineChart />
+            <LineChart dataRange={selected} />
           </div>
         </div>
       </div>

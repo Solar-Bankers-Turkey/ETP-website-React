@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { ResponsiveLine } from '@nivo/line'
-import data from './moctData_1.json'
+import data1 from './moctData_1.json'
+import data2 from './moctData_2.json'
+import data3 from './moctData_3.json'
+import data4 from './moctData_4.json'
 
-const LineChart = () => {
+interface Props {
+  dataRange: string
+}
+const dataSeries = {
+  day: data1,
+  week: data2,
+  month: data3,
+  year: data4,
+}
+const LineChart = React.memo(function LineChart({ dataRange }: Props) {
+  const [data, setData] = useState(dataSeries[dataRange])
+  useEffect(() => {
+    setData(dataSeries[dataRange])
+  }, [dataRange])
   return (
     <ResponsiveLine
       theme={{
@@ -84,6 +100,6 @@ const LineChart = () => {
       ]}
     />
   )
-}
+})
 
 export default LineChart
