@@ -9,6 +9,7 @@
     "build-export": "next build && next export && serve out"
   },
   "dependencies": {
+    "@nivo/bar": "^0.62.0",
     "@nivo/line": "^0.62.0",
     "classnames": "^2.2.6",
     "next": "9.5.3",

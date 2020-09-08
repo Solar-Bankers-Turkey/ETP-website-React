@@ -6,11 +6,12 @@ interface Props {
   className?: string
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
   style?: React.CSSProperties
+  variant?: 'ghost' | 'primary-contained' | 'selected'
 }
 
-const Button = ({ children, className, onClick }: Props) => {
+const Button = ({ children, className, onClick, variant }: Props) => {
   return (
-    <button onClick={onClick} className={cx(styles.container, className)}>
+    <button onClick={onClick} className={cx(styles.container, className, styles[variant])}>
       {children}
     </button>
   )

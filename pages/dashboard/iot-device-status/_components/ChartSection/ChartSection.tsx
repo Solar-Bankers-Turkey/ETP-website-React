@@ -12,16 +12,16 @@ const ChartSection = () => {
         <div className={styles.charts_header}>
           <h1>Energy Consumption</h1>
           <div className={styles.btn_group}>
-            <Button onClick={() => setSelected('day')} className={selected === 'day' && styles.btn_selected}>
+            <Button onClick={() => setSelected('day')} variant={selected === 'day' ? 'selected' : 'ghost'}>
               Day
             </Button>
-            <Button onClick={() => setSelected('week')} className={selected === 'week' && styles.btn_selected}>
+            <Button onClick={() => setSelected('week')} variant={selected === 'week' ? 'selected' : 'ghost'}>
               Week
             </Button>
-            <Button onClick={() => setSelected('month')} className={selected === 'month' && styles.btn_selected}>
+            <Button onClick={() => setSelected('month')} variant={selected === 'month' ? 'selected' : 'ghost'}>
               Month
             </Button>
-            <Button onClick={() => setSelected('year')} className={selected === 'year' && styles.btn_selected}>
+            <Button onClick={() => setSelected('year')} variant={selected === 'year' ? 'selected' : 'ghost'}>
               Year
             </Button>
           </div>

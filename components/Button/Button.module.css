@@ -1,22 +1,19 @@
 .container {
-  white-space: nowrap;
-  vertical-align: baseline;
-  text-align: center;
   cursor: pointer;
-  font-size: 0.85rem;
-  line-height: 1;
-  font-weight: 600;
   border-radius: 4px;
 
+  white-space: nowrap;
+  vertical-align: baseline;
+  line-height: 1;
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 14px;
-  min-width: 64px;
-  height: 30px;
+  font-size: 0.85rem;
   text-align: center;
 
-  letter-spacing: 1.5px;
-  color: var(--primary-color);
-  background-color: var(--bg-color-secondary-light);
+  padding: 0 1rem;
+  min-width: 64px;
+  min-height: 30px;
+
   & > span {
     display: block;
   }
@@ -28,10 +25,24 @@
     background-color: var(--bg-color-secondary);
   }
   &:active {
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
   &:focus {
     background-color: var(--bg-color-secondary);
   }
   outline: none;
+}
+
+.selected {
+  background: var(--primary-color) !important;
+  color: var(--text-color-primary) !important;
+}
+
+.primary-contained {
+  color: var(--primary-color);
+  background-color: var(--bg-color-secondary-light);
+}
+.ghost {
+  background: var(--bg-color-primary);
+  color: var(--text-color-secondary);
 }

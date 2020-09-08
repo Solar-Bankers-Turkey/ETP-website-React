@@ -20,18 +20,6 @@
 }
 .btn_group {
   margin-bottom: 2rem;
-  & > button {
-    margin-right: 1rem;
-    font-size: 0.75rem;
-    background: var(--bg-color-primary);
-    color: var(--text-color-secondary);
-    font-weight: 400;
-  }
-}
-
-.btn_selected {
-  background: var(--primary-color) !important;
-  color: var(--text-color-primary) !important;
 }
 
 .charts_group {

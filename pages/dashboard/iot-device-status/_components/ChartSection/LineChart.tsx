@@ -23,7 +23,6 @@ const LineChart = React.memo(function LineChart({ dataRange }: Props) {
     <ResponsiveLine
       enableSlices="x"
       sliceTooltip={({ slice }) => {
-        console.log(slice)
         return (
           <div
             style={{
