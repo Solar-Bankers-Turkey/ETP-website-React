@@ -1,7 +1,7 @@
 .container {
   cursor: pointer;
   border-radius: 4px;
-
+  user-select: none;
   white-space: nowrap;
   vertical-align: baseline;
   line-height: 1;

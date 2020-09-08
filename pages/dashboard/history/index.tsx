@@ -1,8 +1,8 @@
 import React from 'react'
-import EnergyMarket from '../energy-market/_EnergyMarket'
+import History from './_components/History'
 
 const index = () => {
-  return <EnergyMarket></EnergyMarket>
+  return <History />
 }
 
 export default index
