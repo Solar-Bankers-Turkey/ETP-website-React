@@ -20,8 +20,10 @@
   --warning-color: #ffab4f;
   --success-color: #ffab4f;
 
-  --bg-border-color-dark: #000000;
-  --bg-border-color-soft: #00000025;
+  --border-color-dark: #000000;
+  --border-color-soft: #00000025;
+  --border-color-invert: #ffffff;
+  --border-color-invert-soft: #ffffff50;
 
   --orange: #ffab4f;
   --green: #05c985;

@@ -14,6 +14,7 @@
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-focus-lock": "^2.4.1",
     "react-hook-form": "^6.7.1",
     "react-minimal-pie-chart": "^8.0.1"
   },

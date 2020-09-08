@@ -21,11 +21,41 @@ const LineChart = React.memo(function LineChart({ dataRange }: Props) {
   }, [dataRange])
   return (
     <ResponsiveLine
+      enableSlices="x"
+      sliceTooltip={({ slice }) => {
+        console.log(slice)
+        return (
+          <div
+            style={{
+              background: 'var(--bg-color-primary-dark)',
+              padding: '9px 12px',
+              border: '1px solid var(--border-color-invert-soft)',
+              borderRadius: '4px',
+            }}
+          >
+            <div style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border-color-invert-soft)' }}>
+              {slice.points[0].data.x}
+            </div>
+            <div style={{ marginBottom: '0.5rem' }}></div>
+            {slice.points.map(point => (
+              <div
+                key={point.id}
+                style={{
+                  color: point.serieColor,
+                  padding: '3px 0',
+                }}
+              >
+                <strong>{point.serieId}</strong> [{point.data.yFormatted}]
+              </div>
+            ))}
+          </div>
+        )
+      }}
       theme={{
         axis: {
           ticks: {
             line: {
-              stroke: 'var(--bg-border-color-soft)',
+              stroke: 'var(--border-color-soft)',
             },
             text: {
               fill: 'var(--text-color-secondary-dark)',
@@ -34,7 +64,7 @@ const LineChart = React.memo(function LineChart({ dataRange }: Props) {
         },
         grid: {
           line: {
-            stroke: 'var(--bg-border-color-soft)',
+            stroke: 'var(--border-color-soft)',
           },
         },
       }}

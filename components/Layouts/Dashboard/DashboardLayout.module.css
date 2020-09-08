@@ -38,6 +38,7 @@
   height: 64px;
   width: 100%;
   background: var(--bg-color-primary);
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.23);
 }
 .content {
   will-change: width;

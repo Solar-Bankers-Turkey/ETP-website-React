@@ -12,7 +12,7 @@
   padding-right: 1rem;
   color: var(--text-color-primary);
   margin-bottom: 1rem;
-  border: 1px solid var(--bg-border-color-soft);
+  border: 1px solid var(--border-color-soft);
   border-radius: 4px;
   display: flex;
   flex-direction: row;
