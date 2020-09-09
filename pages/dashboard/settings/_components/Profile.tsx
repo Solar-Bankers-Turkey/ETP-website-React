@@ -13,10 +13,10 @@ const Profile = () => {
             loading="lazy"
             src="https://pecb.com/conferences/wp-content/uploads/2017/10/no-profile-picture.jpg"
           ></img>
-        </div>
-        <div className={styles.desc}>
-          <h1>Profile Picture</h1>
-          <p>PNG or JPG. maximum 1000 pixel width and height</p>
+          <div className={styles.desc}>
+            <h1>Profile Picture</h1>
+            <p>PNG or JPG. maximum 1000 pixel width and height</p>
+          </div>
         </div>
         <Button variant="primary-contained">Upload</Button>
       </div>

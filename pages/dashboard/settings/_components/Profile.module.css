@@ -18,11 +18,14 @@
     margin-left: auto;
   }
   .profile_img {
-    height: 4em;
-    width: 4em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     & > img {
-      height: 100%;
-      width: 100%;
+      min-height: 4em;
+      min-width: 4em;
+      max-height: 4em;
+      max-width: 4em;
       object-fit: cover;
       border-radius: 50%;
     }
@@ -53,5 +56,36 @@
   display: flex;
   & > div {
     margin: 1rem 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0rem;
+  }
+  .select_profile_picture {
+    padding: 1rem 1rem;
+    height: max-content;
+  }
+  .profile_img {
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
+  .desc {
+    height: max-content;
+    width: 200px;
+    margin: 0 !important;
+  }
+
+  .input_group {
+    flex-direction: column;
+    & > div {
+      margin: 1rem 0;
+      padding: 0.5rem;
+    }
   }
 }
