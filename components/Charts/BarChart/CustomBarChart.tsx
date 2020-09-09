@@ -22,7 +22,7 @@ const CustomBarChart = React.memo(function CustomBarChart({ dataSeries, colors, 
     return () => window.removeEventListener('resize', setChart)
   }, [])
 
-  const CustomBarItem = ({ x, y, width, height, color, label, theme, labelColor }) => {
+  const CustomBarItem = ({ x, y, width, height, color, label, theme, labelColor, data }) => {
     return (
       <g transform={`translate(${x}, ${y})`}>
         <rect width={width > 32 ? 32 : width} height={height} rx={2} ry={2} fill={color}></rect>
@@ -53,11 +53,6 @@ const CustomBarChart = React.memo(function CustomBarChart({ dataSeries, colors, 
       innerPadding={4}
       groupMode={groupMode}
       colors={colors}
-      tooltip={({ id, value, color }) => (
-        <strong style={{ color }}>
-          {id}: {value}
-        </strong>
-      )}
       theme={{
         axis: {
           ticks: {
@@ -82,15 +77,12 @@ const CustomBarChart = React.memo(function CustomBarChart({ dataSeries, colors, 
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'country',
         legendPosition: 'middle',
         legendOffset: 32,
       }}
       axisLeft={{
-        tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'food',
         legendPosition: 'middle',
         legendOffset: -40,
       }}
