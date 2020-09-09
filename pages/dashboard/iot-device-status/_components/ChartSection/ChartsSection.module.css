@@ -76,11 +76,27 @@
 }
 
 @media (max-width: 940px) {
+  .container {
+    padding: 1;
+  }
   .charts_header {
     align-items: center;
+    flex-wrap: wrap;
+    & > div {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+    & > div > button {
+      padding: 0;
+      width: 20px;
+    }
   }
   .charts_group {
     flex-direction: column;
+    height: 800px;
   }
   .btn_group {
     margin: 0;
@@ -89,6 +105,7 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;

@@ -43,6 +43,9 @@
 .content {
   will-change: width;
   width: 100%;
+  & > div {
+    padding: 0 2rem;
+  }
 }
 
 @media (max-width: 1150px) {
@@ -81,6 +84,11 @@
     background: rgba(0, 0, 0, 0.425);
     z-index: 70;
     opacity: 1;
+  }
+  .content {
+    & > div {
+      padding: 0 0.5rem;
+    }
   }
 }
 
