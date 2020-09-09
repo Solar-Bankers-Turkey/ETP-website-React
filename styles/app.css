@@ -14,11 +14,11 @@ html {
   fill: var(--text-color-secondary);
   font-size: 16px;
   line-height: 1.5;
-  height: 100vh;
+  min-height: 100%;
 }
 
 body {
-  height: 100%;
+  min-height: 100%;
 
   -webkit-font-smoothing: subpixel-antialiased;
   font-kerning: normal;
@@ -30,9 +30,9 @@ body {
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 #__next {
-  height: 100vh;
+  min-height: 100%;
   & > div {
-    height: 100%;
+    min-height: 100%;
   }
 }
 
