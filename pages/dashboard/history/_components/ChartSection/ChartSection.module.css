@@ -6,6 +6,8 @@
   border-radius: 8px;
   padding: 2rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -46,7 +48,14 @@
   align-items: center;
 }
 
-.container {
+.barchart_container {
   width: 100%;
   height: 500px;
+}
+
+.linechart_container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  overflow: hidden;
 }

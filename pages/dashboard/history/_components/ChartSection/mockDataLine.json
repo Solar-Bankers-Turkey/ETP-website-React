@@ -1,0 +1,104 @@
+[
+  {
+    "id": "Net Profit",
+    "color": "rgb(31, 142, 250)",
+    "data": [
+      {
+        "x": "Monday",
+        "y": 100
+      },
+      {
+        "x": "Tuesday",
+        "y": 200
+      },
+      {
+        "x": "Wednesday",
+        "y": 700
+      },
+      {
+        "x": "Thursday",
+        "y": 100
+      },
+      {
+        "x": "Friday",
+        "y": 300
+      },
+      {
+        "x": "Saturday",
+        "y": 700
+      },
+      {
+        "x": "Sunday",
+        "y": 200
+      }
+    ]
+  },
+  {
+    "id": "Revenue",
+    "color": "rgb(255, 255, 255)",
+    "data": [
+      {
+        "x": "Monday",
+        "y": 50
+      },
+      {
+        "x": "Tuesday",
+        "y": 200
+      },
+      {
+        "x": "Wednesday",
+        "y": 100
+      },
+      {
+        "x": "Thursday",
+        "y": 300
+      },
+      {
+        "x": "Friday",
+        "y": 200
+      },
+      {
+        "x": "Saturday",
+        "y": 600
+      },
+      {
+        "x": "Sunday",
+        "y": 400
+      }
+    ]
+  },
+  {
+    "id": "Free Cash Flow",
+    "color": "rgb(5, 201, 133)",
+    "data": [
+      {
+        "x": "Monday",
+        "y": 300
+      },
+      {
+        "x": "Tuesday",
+        "y": 100
+      },
+      {
+        "x": "Wednesday",
+        "y": 503
+      },
+      {
+        "x": "Thursday",
+        "y": 330
+      },
+      {
+        "x": "Friday",
+        "y": 200
+      },
+      {
+        "x": "Saturday",
+        "y": 230
+      },
+      {
+        "x": "Sunday",
+        "y": 120
+      }
+    ]
+  }
+]

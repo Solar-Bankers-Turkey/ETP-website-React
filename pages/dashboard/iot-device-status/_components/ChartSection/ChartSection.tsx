@@ -1,11 +1,26 @@
-import React, { useState } from 'react'
-import styles from './ChartsSection.module.css'
+import React, { useState, useEffect } from 'react'
 import Button from '../../../../../components/Button/Button'
 import DonutChart from './DonutChart'
-import LineChart from './LineChart'
+import CustomLineChart from '../../../../../components/Charts/LineChart/CustomLineChart'
 
+import styles from './ChartsSection.module.css'
+
+import data1 from './moctData_1.json'
+import data2 from './moctData_2.json'
+import data3 from './moctData_3.json'
+import data4 from './moctData_4.json'
+const dataSeries = {
+  day: data1,
+  week: data2,
+  month: data3,
+  year: data4,
+}
 const ChartSection = () => {
   const [selected, setSelected] = useState('day')
+  const [data, setData] = useState(dataSeries[selected])
+  useEffect(() => {
+    setData(dataSeries[selected])
+  }, [selected])
   return (
     <div className={styles.container}>
       <div className={styles.charts}>
@@ -36,7 +51,11 @@ const ChartSection = () => {
           </div>
 
           <div className={styles.line_section}>
-            <LineChart dataRange={selected} />
+            <CustomLineChart
+              margin={{ top: 10, right: 30, bottom: 70, left: 50 }}
+              dataSeries={data}
+              colors={['#0cb680', '#e19c52', '#784097', '#d24342']}
+            />
           </div>
         </div>
       </div>

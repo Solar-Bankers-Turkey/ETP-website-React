@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 
-import styles from './BarChartSection.module.css'
+import styles from './ChartSection.module.css'
 import BarChartIcon from '../../../../../components/Icons/BarChartIcon'
 import TimeLineIcon from '../../../../../components/Icons/TimeLineIcon'
 import Button from '../../../../../components/Button/Button'
 
-const BarChartHeader = () => {
-  const [chartType, setChartType] = useState('bar')
+interface Props {
+  chartType: 'bar' | 'line'
+  setChartType: React.Dispatch<React.SetStateAction<string>>
+}
+const BarChartHeader = ({ chartType, setChartType }: Props) => {
   const [chartRange, setChartRange] = useState('day')
   return (
     <div className={styles.header}>

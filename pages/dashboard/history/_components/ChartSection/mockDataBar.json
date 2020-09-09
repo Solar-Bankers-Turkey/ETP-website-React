@@ -1,0 +1,45 @@
+[
+  {
+    "day": "Monday",
+    "Net Profit": 44,
+    "Revenue": 10,
+    "Free Cash Flow": 20
+  },
+  {
+    "day": "Tuesday",
+    "Net Profit": 55,
+    "Revenue": 20,
+    "Free Cash Flow": 61
+  },
+  {
+    "day": "Wednesday",
+    "Net Profit": 30,
+    "Revenue": 30,
+    "Free Cash Flow": 56
+  },
+  {
+    "day": "Thursday",
+    "Net Profit": 56,
+    "Revenue": 40,
+    "Free Cash Flow": 35
+  },
+  {
+    "day": "Friday",
+    "Net Profit": 80,
+    "Revenue": 25,
+    "Free Cash Flow": 40
+  },
+
+  {
+    "day": "Saturday",
+    "Net Profit": 65,
+    "Revenue": 45,
+    "Free Cash Flow": 15
+  },
+  {
+    "day": "Sunday",
+    "Net Profit": 60,
+    "Revenue": 10,
+    "Free Cash Flow": 20
+  }
+]
