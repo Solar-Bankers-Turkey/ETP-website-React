@@ -7,8 +7,8 @@ const History = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.header}>History</h1>
-      <ChartSection />
 
+      <ChartSection />
       <NotificationList />
     </div>
   )

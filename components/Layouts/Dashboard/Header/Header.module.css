@@ -17,6 +17,7 @@
 }
 
 .sidebar_toggle {
+  user-select: none;
   cursor: pointer;
   min-height: 24px;
   min-width: 24px;

@@ -1,0 +1,35 @@
+.container {
+  padding: 0 2rem;
+  & > section {
+    background: var(--bg-color-primary);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  text-transform: capitalize;
+
+  & > h1 {
+    width: 100%;
+  }
+}
+.content {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas: 'nav settings';
+  column-gap: 2rem;
+
+  & > nav {
+    grid-area: nav;
+  }
+  & > section {
+    grid-area: settings;
+  }
+}
