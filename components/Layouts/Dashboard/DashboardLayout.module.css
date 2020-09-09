@@ -7,19 +7,29 @@
 
 .sidebar {
   overflow-x: hidden;
-  flex: 1 0 auto;
   width: 240px;
+  flex: 1 0 auto;
   will-change: width;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background: var(--bg-color-primary);
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  & > div {
+    width: 100%;
+  }
+  & > div > div {
+    width: 100%;
+  }
 }
 .sidebar_closed {
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 0px;
   overflow: hidden;
-  & > * {
+  & > div {
     width: 0;
+  }
+  & > div > div {
+    width: 0;
+    overflow: hidden;
   }
 }
 
