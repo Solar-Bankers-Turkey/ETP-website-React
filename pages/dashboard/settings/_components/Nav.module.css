@@ -29,6 +29,9 @@
       transform: translateX(8px);
     }
   }
+  & > a {
+    display: contents;
+  }
 }
 .nav_list_item_icon {
   width: 1.5rem;

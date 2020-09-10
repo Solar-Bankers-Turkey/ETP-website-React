@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Profile.module.css'
-import Button from '../../../../components/Button/Button'
-import Input from '../../../../components/Input/Input'
-import Textarea from '../../../../components/Input/Textarea'
+import Button from '../../../../../components/Button/Button'
+import Input from '../../../../../components/Input/Input'
+import Textarea from '../../../../../components/Input/Textarea'
 
 const Profile = () => {
   return (

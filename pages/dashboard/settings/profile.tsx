@@ -2,7 +2,7 @@ import React from 'react'
 import Settings from './_components/Settings'
 import Profile from './_components/Profile/Profile'
 
-const index = () => {
+const profile = () => {
   return (
     <Settings>
       <Profile />
@@ -10,4 +10,4 @@ const index = () => {
   )
 }
 
-export default index
+export default profile

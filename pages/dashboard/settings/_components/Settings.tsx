@@ -1,11 +1,19 @@
 import React from 'react'
-import Profile from './Profile'
+import Nav from './Nav'
 
-const Settings = () => {
+import styles from './Settings.module.css'
+
+const Settings = ({ children }) => {
   return (
-    <section>
-      <Profile />
-    </section>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h1>Settings</h1>
+      </div>
+      <div className={styles.content}>
+        <Nav></Nav>
+        <section>{children}</section>
+      </div>
+    </div>
   )
 }
 

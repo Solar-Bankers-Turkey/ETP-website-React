@@ -7,28 +7,38 @@ import LockIcon from '../../../../components/Icons/LockIcon'
 import BellIcon from '../../../../components/Icons/BellIcon'
 import DeviceIcon from '../../../../components/Icons/DeviceIcon'
 import RightArrowIcon from '../../../../components/Icons/RightArrowIcon'
+import Link from 'next/link'
+
 const Nav = () => {
   return (
     <nav className={styles.nav_container}>
       <ul className={styles.nav_list}>
         <li className={styles.nav_list_item}>
-          <div className={styles.nav_list_item_icon}>
-            <ProfileIcon />
-          </div>
-          <div className={styles.nav_list_item_text}>profile</div>
-          <div className={styles.right_arrow}>
-            <RightArrowIcon />
-          </div>
+          <Link href="/dashboard/settings/profile">
+            <a>
+              <div className={styles.nav_list_item_icon}>
+                <ProfileIcon />
+              </div>
+              <div className={styles.nav_list_item_text}>profile</div>
+              <div className={styles.right_arrow}>
+                <RightArrowIcon />
+              </div>
+            </a>
+          </Link>
         </li>
 
         <li className={styles.nav_list_item}>
-          <div className={styles.nav_list_item_icon}>
-            <LockIcon />
-          </div>
-          <div className={styles.nav_list_item_text}>login & security</div>
-          <div className={styles.right_arrow}>
-            <RightArrowIcon />
-          </div>
+          <Link href="/dashboard/settings/login-security">
+            <a>
+              <div className={styles.nav_list_item_icon}>
+                <LockIcon />
+              </div>
+              <div className={styles.nav_list_item_text}>login & security</div>
+              <div className={styles.right_arrow}>
+                <RightArrowIcon />
+              </div>
+            </a>
+          </Link>
         </li>
 
         <li className={styles.nav_list_item}>
