@@ -13,8 +13,8 @@ const Nav = () => {
   return (
     <nav className={styles.nav_container}>
       <ul className={styles.nav_list}>
-        <li className={styles.nav_list_item}>
-          <Link href="/dashboard/settings/profile">
+        <Link href="/dashboard/settings/profile">
+          <li className={styles.nav_list_item}>
             <a>
               <div className={styles.nav_list_item_icon}>
                 <ProfileIcon />
@@ -24,11 +24,11 @@ const Nav = () => {
                 <RightArrowIcon />
               </div>
             </a>
-          </Link>
-        </li>
+          </li>
+        </Link>
 
-        <li className={styles.nav_list_item}>
-          <Link href="/dashboard/settings/login-security">
+        <Link href="/dashboard/settings/login-security">
+          <li className={styles.nav_list_item}>
             <a>
               <div className={styles.nav_list_item_icon}>
                 <LockIcon />
@@ -38,37 +38,49 @@ const Nav = () => {
                 <RightArrowIcon />
               </div>
             </a>
-          </Link>
-        </li>
+          </li>
+        </Link>
 
-        <li className={styles.nav_list_item}>
-          <div className={styles.nav_list_item_icon}>
-            <CreditCardIcon />
-          </div>
-          <div className={styles.nav_list_item_text}>payment</div>
-          <div className={styles.right_arrow}>
-            <RightArrowIcon />
-          </div>
-        </li>
+        <Link href="/dashboard/settings/payment">
+          <li className={styles.nav_list_item}>
+            <a>
+              <div className={styles.nav_list_item_icon}>
+                <CreditCardIcon />
+              </div>
+              <div className={styles.nav_list_item_text}>payment</div>
+              <div className={styles.right_arrow}>
+                <RightArrowIcon />
+              </div>
+            </a>
+          </li>
+        </Link>
+        <Link href="/dashboard/settings/notifications">
+          <li className={styles.nav_list_item}>
+            <a>
+              <div className={styles.nav_list_item_icon}>
+                <BellIcon />
+              </div>
+              <div className={styles.nav_list_item_text}>notifications</div>
+              <div className={styles.right_arrow}>
+                <RightArrowIcon />
+              </div>
+            </a>
+          </li>
+        </Link>
 
-        <li className={styles.nav_list_item}>
-          <div className={styles.nav_list_item_icon}>
-            <BellIcon />
-          </div>
-          <div className={styles.nav_list_item_text}>notifications</div>
-          <div className={styles.right_arrow}>
-            <RightArrowIcon />
-          </div>
-        </li>
-        <li className={styles.nav_list_item}>
-          <div className={styles.nav_list_item_icon}>
-            <DeviceIcon />
-          </div>
-          <div className={styles.nav_list_item_text}>device</div>
-          <div className={styles.right_arrow}>
-            <RightArrowIcon />
-          </div>
-        </li>
+        <Link href="/dashboard/settings/device">
+          <li className={styles.nav_list_item}>
+            <a>
+              <div className={styles.nav_list_item_icon}>
+                <DeviceIcon />
+              </div>
+              <div className={styles.nav_list_item_text}>device</div>
+              <div className={styles.right_arrow}>
+                <RightArrowIcon />
+              </div>
+            </a>
+          </li>
+        </Link>
       </ul>
     </nav>
   )
