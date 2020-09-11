@@ -1,6 +1,6 @@
 import React from 'react'
+import cx from 'classnames'
 import styles from './Nav.module.css'
-
 import ProfileIcon from '../../../../components/Icons/ProfileIcon'
 import CreditCardIcon from '../../../../components/Icons/CreditCardIcon'
 import LockIcon from '../../../../components/Icons/LockIcon'
@@ -8,13 +8,21 @@ import BellIcon from '../../../../components/Icons/BellIcon'
 import DeviceIcon from '../../../../components/Icons/DeviceIcon'
 import RightArrowIcon from '../../../../components/Icons/RightArrowIcon'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Nav = () => {
+  const router = useRouter()
+
   return (
     <nav className={styles.nav_container}>
       <ul className={styles.nav_list}>
         <Link href="/dashboard/settings/profile">
-          <li className={styles.nav_list_item}>
+          <li
+            className={cx(
+              styles.nav_list_item,
+              router.pathname === '/dashboard/settings/profile' ? styles.selected : '',
+            )}
+          >
             <a>
               <div className={styles.nav_list_item_icon}>
                 <ProfileIcon />
@@ -28,7 +36,12 @@ const Nav = () => {
         </Link>
 
         <Link href="/dashboard/settings/login-security">
-          <li className={styles.nav_list_item}>
+          <li
+            className={cx(
+              styles.nav_list_item,
+              router.pathname === '/dashboard/settings/login-security' ? styles.selected : '',
+            )}
+          >
             <a>
               <div className={styles.nav_list_item_icon}>
                 <LockIcon />
@@ -42,7 +55,12 @@ const Nav = () => {
         </Link>
 
         <Link href="/dashboard/settings/payment">
-          <li className={styles.nav_list_item}>
+          <li
+            className={cx(
+              styles.nav_list_item,
+              router.pathname === '/dashboard/settings/payment' ? styles.selected : '',
+            )}
+          >
             <a>
               <div className={styles.nav_list_item_icon}>
                 <CreditCardIcon />
@@ -55,7 +73,12 @@ const Nav = () => {
           </li>
         </Link>
         <Link href="/dashboard/settings/notifications">
-          <li className={styles.nav_list_item}>
+          <li
+            className={cx(
+              styles.nav_list_item,
+              router.pathname === '/dashboard/settings/notifications' ? styles.selected : '',
+            )}
+          >
             <a>
               <div className={styles.nav_list_item_icon}>
                 <BellIcon />
@@ -69,7 +92,12 @@ const Nav = () => {
         </Link>
 
         <Link href="/dashboard/settings/device">
-          <li className={styles.nav_list_item}>
+          <li
+            className={cx(
+              styles.nav_list_item,
+              router.pathname === '/dashboard/settings/device' ? styles.selected : '',
+            )}
+          >
             <a>
               <div className={styles.nav_list_item_icon}>
                 <DeviceIcon />

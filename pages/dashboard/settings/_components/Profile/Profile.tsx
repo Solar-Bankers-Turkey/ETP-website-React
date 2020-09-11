@@ -7,6 +7,7 @@ import Textarea from '../../../../../components/Input/Textarea'
 const Profile = () => {
   return (
     <div className={styles.container}>
+      <h1 className={styles.title}>Profile Details</h1>
       <div className={styles.select_profile_picture}>
         <div className={styles.profile_img}>
           <img
