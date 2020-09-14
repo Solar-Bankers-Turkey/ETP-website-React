@@ -2,6 +2,7 @@ import React from 'react'
 import Info from './Info/Info'
 import styles from './Overview.module.css'
 import LineChart from './LineChart/LineChart'
+import BarChart from './BarChart/BarChart'
 const Overview = () => {
   return (
     <div className={styles.section}>
@@ -16,7 +17,9 @@ const Overview = () => {
           <h1>energy balance this week</h1>
           <LineChart />
         </div>
-        <div className={styles.o_weather_container}></div>
+        <div className={styles.o_weather_container}>
+          <BarChart />
+        </div>
       </div>
     </div>
   )

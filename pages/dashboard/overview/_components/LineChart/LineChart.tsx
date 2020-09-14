@@ -41,6 +41,7 @@ const LineChart = () => {
   return (
     <div className={styles.line_chart}>
       <CustomLineChart
+        lineCurve="cardinal"
         showLegend={false}
         margin={{ top: 20, right: 30, bottom: 40, left: 50 }}
         dataSeries={data}

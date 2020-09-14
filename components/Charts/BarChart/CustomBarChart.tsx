@@ -1,13 +1,40 @@
 import React, { useState, useLayoutEffect } from 'react'
-import { ResponsiveBar } from '@nivo/bar'
+import { ResponsiveBar, BarItemProps } from '@nivo/bar'
 
 interface Props {
   dataSeries: any
   colors: string[]
   keys: string[]
+  overrideGroupMode?: 'grouped' | 'stacked' | null
 }
 
-const CustomBarChart = React.memo(function CustomBarChart({ dataSeries, colors, keys }: Props) {
+const CustomBarItem = ({ x, y, width, height, color, label, theme, labelColor }) => {
+  return (
+    <g transform={`translate(${x}, ${y})`}>
+      <rect width={width > 32 ? 32 : width} height={height} rx={2} ry={2} fill={color}></rect>
+      <text
+        x={width > 32 ? 16 : width / 2}
+        y={height / 2}
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{
+          ...theme.labels.text,
+          pointerEvents: 'none',
+          fill: labelColor,
+        }}
+      >
+        {label}
+      </text>
+    </g>
+  )
+}
+
+const CustomBarChart = React.memo(function CustomBarChart({
+  overrideGroupMode = null,
+  dataSeries,
+  colors,
+  keys,
+}: Props) {
   const [groupMode, setGroupMode] = useState<'grouped' | 'stacked'>('grouped')
 
   useLayoutEffect(() => {
@@ -22,26 +49,6 @@ const CustomBarChart = React.memo(function CustomBarChart({ dataSeries, colors, 
     return () => window.removeEventListener('resize', setChart)
   }, [])
 
-  const CustomBarItem = ({ x, y, width, height, color, label, theme, labelColor, data }) => {
-    return (
-      <g transform={`translate(${x}, ${y})`}>
-        <rect width={width > 32 ? 32 : width} height={height} rx={2} ry={2} fill={color}></rect>
-        <text
-          x={width > 32 ? 16 : width / 2}
-          y={height / 2}
-          textAnchor="middle"
-          dominantBaseline="central"
-          style={{
-            ...theme.labels.text,
-            pointerEvents: 'none',
-            fill: labelColor,
-          }}
-        >
-          {label}
-        </text>
-      </g>
-    )
-  }
   return (
     <ResponsiveBar
       barComponent={CustomBarItem}
@@ -51,7 +58,7 @@ const CustomBarChart = React.memo(function CustomBarChart({ dataSeries, colors, 
       margin={{ top: 40, right: 0, bottom: 50, left: 30 }}
       padding={0.5}
       innerPadding={4}
-      groupMode={groupMode}
+      groupMode={overrideGroupMode ? overrideGroupMode : groupMode}
       colors={colors}
       theme={{
         axis: {

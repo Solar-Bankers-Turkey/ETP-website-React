@@ -6,9 +6,26 @@ interface Props {
   dataSeries: any
   margin: { top: number; right: number; bottom: number; left: number }
   showLegend?: boolean
+  lineCurve?:
+    | 'basis'
+    | 'cardinal'
+    | 'catmullRom'
+    | 'linear'
+    | 'monotoneX'
+    | 'monotoneY'
+    | 'natural'
+    | 'step'
+    | 'stepAfter'
+    | 'stepBefore'
 }
 
-const CustomLineChart = React.memo(function CustomLineChart({ showLegend = true, dataSeries, colors, margin }: Props) {
+const CustomLineChart = React.memo(function CustomLineChart({
+  lineCurve = 'linear',
+  showLegend = true,
+  dataSeries,
+  colors,
+  margin,
+}: Props) {
   const legendProps: any = showLegend
     ? [
         {
@@ -33,6 +50,7 @@ const CustomLineChart = React.memo(function CustomLineChart({ showLegend = true,
 
   return (
     <ResponsiveLine
+      curve={lineCurve}
       enableSlices="x"
       sliceTooltip={({ slice }) => {
         return (
