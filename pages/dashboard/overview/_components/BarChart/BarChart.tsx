@@ -50,13 +50,15 @@ const BarChart = () => {
         data={data}
         keys={['min', 'max']}
         minValue={16}
-        maxValue={38}
+        maxValue={36}
         indexBy="day"
-        margin={{ top: 40, right: 0, bottom: 50, left: 30 }}
+        margin={{ top: 40, right: 0, bottom: 50, left: 40 }}
         padding={0.85}
         borderRadius={14}
         groupMode={'stacked'}
         colors={['transparent', 'var(--primary-color)']}
+        enableGridX={false}
+        gridYValues={[16, 36]}
         theme={{
           tooltip: {
             container: {
@@ -90,10 +92,10 @@ const BarChart = () => {
           legendOffset: 32,
         }}
         axisLeft={{
-          tickPadding: 5,
+          tickPadding: 10,
           tickRotation: 0,
           legendPosition: 'middle',
-          legendOffset: -40,
+          legendOffset: 40,
         }}
         labelSkipWidth={12}
         labelSkipHeight={12}
