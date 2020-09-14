@@ -5,9 +5,32 @@ interface Props {
   colors: string[]
   dataSeries: any
   margin: { top: number; right: number; bottom: number; left: number }
+  showLegend?: boolean
 }
 
-const CustomLineChart = React.memo(function CustomLineChart({ dataSeries, colors, margin }: Props) {
+const CustomLineChart = React.memo(function CustomLineChart({ showLegend = true, dataSeries, colors, margin }: Props) {
+  const legendProps = showLegend
+    ? [
+        {
+          padding: -8,
+          symbolSpacing: 2,
+          itemTextColor: 'var(--text-color-secondary-light)',
+          anchor: 'bottom',
+          direction: 'row',
+          justify: false,
+          translateY: 48,
+          itemsSpacing: 0,
+          itemDirection: 'top-to-bottom',
+          itemWidth: 100,
+          itemHeight: 20,
+          itemOpacity: 0.75,
+          symbolSize: 12,
+          symbolShape: 'circle',
+          symbolBorderColor: 'rgba(0, 0, 0, .5)',
+        },
+      ]
+    : []
+
   return (
     <ResponsiveLine
       enableSlices="x"
@@ -67,7 +90,6 @@ const CustomLineChart = React.memo(function CustomLineChart({ dataSeries, colors
         tickSize: 5,
         tickPadding: 5,
         tickRotation: 0,
-        legend: 'transportation',
         legendOffset: 36,
         legendPosition: 'middle',
       }}
@@ -90,25 +112,7 @@ const CustomLineChart = React.memo(function CustomLineChart({ dataSeries, colors
       areaBaselineValue={60}
       areaOpacity={0.15}
       useMesh={true}
-      legends={[
-        {
-          padding: -8,
-          symbolSpacing: 2,
-          itemTextColor: 'var(--text-color-secondary-light)',
-          anchor: 'bottom',
-          direction: 'row',
-          justify: false,
-          translateY: 48,
-          itemsSpacing: 0,
-          itemDirection: 'top-to-bottom',
-          itemWidth: 100,
-          itemHeight: 20,
-          itemOpacity: 0.75,
-          symbolSize: 12,
-          symbolShape: 'circle',
-          symbolBorderColor: 'rgba(0, 0, 0, .5)',
-        },
-      ]}
+      legends={legendProps}
     />
   )
 })

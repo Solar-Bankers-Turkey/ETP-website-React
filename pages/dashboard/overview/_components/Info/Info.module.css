@@ -1,0 +1,97 @@
+.info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info_group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > div:first-child {
+    margin-right: 1rem;
+  }
+  & > div:last-child {
+    margin-left: 1rem;
+  }
+  .info_card {
+    height: 130px;
+    width: 100%;
+    background: var(--bg-color-primary);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 8px;
+    padding: 1rem;
+    & > h1 {
+      width: 100%;
+      text-transform: uppercase;
+      color: var(--text-color-secondary-light);
+      margin-bottom: 1rem;
+      white-space: nowrap;
+    }
+    .icon_with_text {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      & > div > h3 {
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+
+      .icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2rem;
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.notification_container {
+  width: 100%;
+  background: var(--bg-color-primary);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  overflow: auto;
+
+  & > h1 {
+    text-transform: uppercase;
+    color: var(--text-color-secondary-light);
+    margin-bottom: 1rem;
+  }
+
+  .notification_list {
+    display: flex;
+    flex-direction: column;
+
+    &_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 1rem 0rem;
+
+      &_icon {
+        margin-bottom: 3px;
+        margin-right: 2rem;
+        min-height: 1rem;
+        min-width: 1rem;
+        max-height: 1rem;
+        max-width: 1rem;
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &_text {
+        color: var(--text-color-secondary-light);
+        line-height: 1;
+      }
+    }
+  }
+}
