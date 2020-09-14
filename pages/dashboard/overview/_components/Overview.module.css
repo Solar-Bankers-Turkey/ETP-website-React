@@ -120,21 +120,22 @@
     .text_group {
       & > h1 {
         font-size: 2rem;
+        white-space: nowrap;
       }
     }
   }
 }
 .weather_chart_container {
   height: 400px;
-  flex: 2;
+  width: 99%;
 }
 
 .line_chart {
-  flex: 1;
+  width: 99%;
   overflow: hidden;
 }
 .bar_chart {
-  flex: 1;
+  width: 99%;
   overflow: hidden;
   height: 100%;
 }
