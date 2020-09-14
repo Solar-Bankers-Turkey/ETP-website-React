@@ -32,6 +32,7 @@
 
 .o_info_container {
   grid-area: o-info;
+  height: 100%;
 }
 
 .o_chart_container {
@@ -51,9 +52,25 @@
     margin: 1rem 1rem;
     white-space: nowrap;
   }
+  & > div {
+    height: 100%;
+  }
 }
 
 .line_chart {
   width: 99%;
   overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 500px 1fr;
+    gap: 1rem 0rem;
+    grid-template-areas:
+      'o-info'
+      'o-chart'
+      'o-weather';
+  }
 }

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const CustomLineChart = React.memo(function CustomLineChart({ showLegend = true, dataSeries, colors, margin }: Props) {
-  const legendProps = showLegend
+  const legendProps: any = showLegend
     ? [
         {
           padding: -8,
