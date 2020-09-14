@@ -6,7 +6,7 @@ interface Props {
   className?: string
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
   style?: React.CSSProperties
-  variant?: 'ghost' | 'primary-contained' | 'selected'
+  variant?: 'ghost' | 'primary-contained' | 'selected' | 'ghost-outlined'
 }
 
 const Button = ({ children, className, onClick, variant }: Props) => {

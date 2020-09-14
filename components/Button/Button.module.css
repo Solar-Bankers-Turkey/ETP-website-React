@@ -42,3 +42,8 @@
   background: var(--bg-color-primary);
   color: var(--text-color-secondary);
 }
+.ghost-outlined {
+  background: var(--bg-color-primary);
+  border: 1px solid var(--border-color-invert-soft);
+  color: var(--text-color-secondary);
+}
