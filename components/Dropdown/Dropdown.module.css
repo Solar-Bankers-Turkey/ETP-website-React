@@ -1,0 +1,36 @@
+.container {
+  cursor: pointer;
+  position: absolute;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 24px;
+  height: 24px;
+}
+
+.list_container {
+  width: 200px;
+  background: var(--bg-color-primary-darker);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+  z-index: 99;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  & > div {
+    user-select: none;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    &:last-child {
+      margin: 0;
+    }
+
+    &:hover {
+      background: var(--bg-color-primary-dark);
+    }
+  }
+}

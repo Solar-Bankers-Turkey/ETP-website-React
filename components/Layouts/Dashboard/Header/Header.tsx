@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Header.module.css'
 import BarsIcon from '../../../Icons/BarsIcon'
 import LockIcon from '../../../Icons/LockIcon'
 import SolarPanelIcon from '../../../Icons/SolarPanelIcon'
 import BatteryIcon from '../../../Icons/BatteryIcon'
-import QuestionIcon from '../../../Icons/QuestionIcon'
 import MailIcon from '../../../Icons/MailIcon'
 import BellIcon from '../../../Icons/BellIcon'
 import IconButton from '../../../Button/IconButton'
+import Dropdown from '../../../Dropdown/Dropdown'
+import DropdownListItem from '../../../Dropdown/DropdownListItem'
 
 interface Props {
   sidebarToggleHandler: () => void
 }
 const Header = ({ sidebarToggleHandler }) => {
+  const [mailDropdown, setMailDropdown] = useState(false)
+
+  const [notificationDropdown, setNotificationDropdown] = useState(false)
+  const testClick = () => {
+    alert('hahah')
+  }
   return (
     <header className={styles.container}>
       <div className={styles.sidebar_toggle} onClick={sidebarToggleHandler}>
@@ -42,9 +49,22 @@ const Header = ({ sidebarToggleHandler }) => {
         </div>
       </div>
       <div className={styles.btn_group}>
-        <IconButton icon={<QuestionIcon />}></IconButton>
-        <IconButton icon={<MailIcon />}></IconButton>
-        <IconButton badge={true} icon={<BellIcon />}></IconButton>
+        <IconButton
+          onClick={() => setMailDropdown(true)}
+          badgeColor="var(--blue)"
+          badgeText={5}
+          badge={true}
+          icon={<MailIcon />}
+        ></IconButton>
+        <Dropdown closeAction={setMailDropdown} topOffset="24px" rightOffset="100px" isOpen={mailDropdown}>
+          <DropdownListItem>1</DropdownListItem>
+          <DropdownListItem>2</DropdownListItem>
+          <DropdownListItem>3</DropdownListItem>
+          <DropdownListItem>4</DropdownListItem>
+          <DropdownListItem>5</DropdownListItem>
+        </Dropdown>
+
+        <IconButton badgeColor="var(--red)" badgeText={11} badge={true} icon={<BellIcon />}></IconButton>
         <div className={styles.btn_username}>Username</div>
       </div>
     </header>

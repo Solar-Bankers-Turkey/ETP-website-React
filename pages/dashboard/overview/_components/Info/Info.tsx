@@ -65,6 +65,12 @@ const Info = () => {
             </div>
             <p className={styles.notification_list_item_text}>System Update: 2.1.3 Software Version Available.</p>
           </li>
+          <li className={styles.notification_list_item}>
+            <div className={styles.notification_list_item_icon}>
+              <InfoIcon color="var(--blue)" />
+            </div>
+            <p className={styles.notification_list_item_text}>System Update: 2.1.3 Software Version Available.</p>
+          </li>
         </ul>
       </div>
     </div>

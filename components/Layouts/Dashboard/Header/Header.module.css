@@ -159,6 +159,7 @@
 }
 
 .btn_username {
+  user-select: none;
   cursor: pointer;
   color: var(--text-color-secondary-light);
 }

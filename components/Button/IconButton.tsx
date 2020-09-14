@@ -5,12 +5,27 @@ interface Props {
   badge?: boolean
   icon: JSX.Element
   badgeText?: number
+  badgeColor?: string
+  children?: React.ReactNode
+  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
-const IconButton: React.FC<Props> = ({ icon, badge = false, badgeText }: Props) => {
+const IconButton: React.FC<Props> = ({
+  badgeColor = 'var(--primary-color)',
+  icon,
+  badge = false,
+  badgeText,
+  children,
+  onClick,
+}: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={onClick}>
       {icon}
-      {badge && <span className={styles.badge}>{badgeText}</span>}
+      {badge && (
+        <span style={{ background: badgeColor }} className={styles.badge}>
+          {badgeText}
+        </span>
+      )}
+      {children}
     </div>
   )
 }
