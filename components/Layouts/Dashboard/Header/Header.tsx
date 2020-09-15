@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import styles from './Header.module.css'
 import BarsIcon from '../../../Icons/BarsIcon'
 import LockIcon from '../../../Icons/LockIcon'
@@ -7,19 +8,21 @@ import BatteryIcon from '../../../Icons/BatteryIcon'
 import MailIcon from '../../../Icons/MailIcon'
 import BellIcon from '../../../Icons/BellIcon'
 import IconButton from '../../../Button/IconButton'
-import Dropdown from '../../../Dropdown/Dropdown'
-import DropdownListItem from '../../../Dropdown/DropdownListItem'
+import HeaderMenu from './HeaderMenu'
 
 interface Props {
   sidebarToggleHandler: () => void
 }
 const Header = ({ sidebarToggleHandler }) => {
-  const [mailDropdown, setMailDropdown] = useState(false)
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
-  const [notificationDropdown, setNotificationDropdown] = useState(false)
-  const testClick = () => {
-    alert('hahah')
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setAnchorEl(event.currentTarget)
   }
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+
   return (
     <header className={styles.container}>
       <div className={styles.sidebar_toggle} onClick={sidebarToggleHandler}>
@@ -48,25 +51,29 @@ const Header = ({ sidebarToggleHandler }) => {
           <div className={styles.battery_fill}></div>
         </div>
       </div>
+
       <div className={styles.btn_group}>
         <IconButton
-          onClick={() => setMailDropdown(true)}
+          id="mail"
+          onClick={handleClick}
           badgeColor="var(--blue)"
           badgeText={5}
           badge={true}
           icon={<MailIcon />}
         ></IconButton>
-        <Dropdown closeAction={setMailDropdown} topOffset="24px" rightOffset="100px" isOpen={mailDropdown}>
-          <DropdownListItem>1</DropdownListItem>
-          <DropdownListItem>2</DropdownListItem>
-          <DropdownListItem>3</DropdownListItem>
-          <DropdownListItem>4</DropdownListItem>
-          <DropdownListItem>5</DropdownListItem>
-        </Dropdown>
 
-        <IconButton badgeColor="var(--red)" badgeText={11} badge={true} icon={<BellIcon />}></IconButton>
-        <div className={styles.btn_username}>Username</div>
+        <IconButton
+          id="notifications"
+          onClick={handleClick}
+          badgeColor="var(--red)"
+          badgeText={11}
+          badge={true}
+          icon={<BellIcon />}
+        ></IconButton>
+
+        <div className={styles.btn_username}>Hello,&nbsp;Username</div>
       </div>
+      <HeaderMenu anchorEl={anchorEl} menuName={anchorEl?.id} handleClose={handleClose} />
     </header>
   )
 }

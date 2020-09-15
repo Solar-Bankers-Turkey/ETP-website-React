@@ -1,4 +1,4 @@
-import Overview from './dashboard/overview/_components/Overview'
+import LoginForm from '../components/Layouts/Auth/LoginForm'
 export default function Home() {
-  return <Overview></Overview>
+  return <LoginForm />
 }

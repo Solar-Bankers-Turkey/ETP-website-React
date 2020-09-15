@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 import styles from './DashboardLayout.module.css'
 import Header from './Header/Header'
 import Sidebar from './Sidebar/Sidebar'
-import { useRouter } from 'next/router'
 
 const DashboardLayout = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(true)

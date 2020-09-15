@@ -2,12 +2,8 @@ import { useEffect } from 'react'
 
 export function useOnClickOutside(ref: any, handler: any) {
   useEffect(() => {
-    const listener = event => {
-      if (!ref.current || ref.current.contains(event.target)) {
-        return
-      }
-
-      handler(event)
+    const listener = (event: any) => {
+      if (event.target.attributes.role?.value === 'dialog') handler(event)
     }
 
     document.addEventListener('mousedown', listener)

@@ -33,6 +33,9 @@
   white-space: nowrap;
   display: table-cell;
   padding: 1rem;
+  &:last-child {
+    width: 10px;
+  }
 }
 .row_item .btn_buy {
   cursor: pointer;
@@ -40,9 +43,10 @@
   line-height: 1;
   font-weight: 600;
   border-radius: 4px;
-  width: 80px;
+  width: max-content;
   height: 36px;
   text-align: center;
+  padding: 0 1rem;
 
   letter-spacing: 1.5px;
   color: var(--primary-color);

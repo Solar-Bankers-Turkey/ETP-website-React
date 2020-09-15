@@ -11,7 +11,12 @@ const EnergyMarket = () => {
         <h1>Energy Market</h1>
         <FabButton />
       </div>
-      <Table rowData={mockData.rowData} headData={mockData.headData} action={true}></Table>
+      <Table
+        rowData={mockData.rowData}
+        headData={mockData.headData}
+        action={() => alert('clicked')}
+        actionName="BUY"
+      ></Table>
     </div>
   )
 }

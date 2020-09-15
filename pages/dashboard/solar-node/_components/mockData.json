@@ -1,0 +1,7 @@
+{
+  "headData": ["name", "Available Coin", "Total Working Time"],
+  "rowData": [
+    ["Room", "1400", "13 hours"],
+    ["Window", "600", "112 minutes"]
+  ]
+}

@@ -1,8 +1,8 @@
 import React from 'react'
-import Solarnode from './_Solarnode'
+import SolarNode from './_components/SolarNode'
 
 const index = () => {
-  return <Solarnode></Solarnode>
+  return <SolarNode />
 }
 
 export default index

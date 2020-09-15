@@ -1,0 +1,14 @@
+.menu {
+  & > div {
+    background: var(--bg-color-primary-darker);
+    color: var(--text-color-primary);
+
+    & > ul {
+      & > li {
+        &:hover {
+          background: var(--bg-color-primary);
+        }
+      }
+    }
+  }
+}

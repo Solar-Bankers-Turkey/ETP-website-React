@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import '../styles/app.css'
 import DashboardLayout from '../components/Layouts/Dashboard/DashboardLayout'
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import NProgress from 'nprogress' //nprogress module
 import 'nprogress/nprogress.css' //styles of nprogress
+import AuthLayout from '../components/Layouts/Auth/AuthLayout'
 
 const DefaultLayout = ({ children }) => (
   <div className="default-container">
@@ -25,21 +26,18 @@ Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
 function MyApp({ Component, pageProps }) {
-  // const router = useRouter()
-  // const page = router.pathname.split('/')[1]
-  // if (page !== 'dashboard') {
-  //   Layout = DefaultLayout
-  // }
+  const router = useRouter()
+  const page = router.pathname.split('/')[1]
+
   let Layout = DashboardLayout
+  if (page !== 'dashboard') {
+    Layout = AuthLayout
+  }
   return (
     <>
       <Head>
         <title>Energy Trading Platform</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        {/* <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-          rel="stylesheet"
-        ></link> */}
       </Head>
       <Layout>
         <Component {...pageProps} />

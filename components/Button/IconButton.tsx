@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './IconButton.module.css'
 
 interface Props {
+  id?: string
   badge?: boolean
   icon: JSX.Element
   badgeText?: number
@@ -10,6 +11,7 @@ interface Props {
   onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
 const IconButton: React.FC<Props> = ({
+  id,
   badgeColor = 'var(--primary-color)',
   icon,
   badge = false,
@@ -18,7 +20,7 @@ const IconButton: React.FC<Props> = ({
   onClick,
 }: Props) => {
   return (
-    <div className={styles.container} onClick={onClick}>
+    <div id={id} className={styles.container} onClick={onClick}>
       {icon}
       {badge && (
         <span style={{ background: badgeColor }} className={styles.badge}>

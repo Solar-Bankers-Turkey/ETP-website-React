@@ -1,0 +1,48 @@
+.login_container {
+  margin-top: 4rem;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.75rem;
+
+  & > label {
+    color: var(--text-color-primary);
+    font-size: 0.85rem;
+    color: var(--text-color-secondary-light);
+    margin-bottom: 0.25rem;
+  }
+  & > input {
+    height: 36px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  & > button {
+    background: var(--primary-color);
+    color: var(--text-color-primary);
+    height: 36px;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+  }
+}
+.link_forgot {
+  cursor: pointer;
+  margin-top: 3rem;
+  text-align: center;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+.link_signup {
+  display: block;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center;
+  &:hover {
+    color: var(--primary-color);
+  }
+  & > span {
+    color: var(--primary-color);
+  }
+}

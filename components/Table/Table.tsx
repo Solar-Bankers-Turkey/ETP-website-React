@@ -2,12 +2,13 @@ import React from 'react'
 import styles from './Table.module.css'
 
 interface Props {
-  action?: boolean
+  action?: () => void
   rowData: string[][]
   headData: string[]
+  actionName?: string
 }
 
-const Table = ({ rowData, headData, action }: Props) => {
+const Table = ({ rowData, headData, action, actionName }: Props) => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -32,7 +33,7 @@ const Table = ({ rowData, headData, action }: Props) => {
               {action && (
                 <div className={styles.row_item}>
                   <button className={styles.btn_buy}>
-                    <span>BUY</span>
+                    <span>{actionName}</span>
                   </button>
                 </div>
               )}
