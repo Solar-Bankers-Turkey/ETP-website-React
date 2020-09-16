@@ -63,6 +63,8 @@ export const tr = {
     add_to_my_wallet: 'Cüzdanıma Ekle',
   },
   info: {
+    get_green: 'Güneşten temiz enerji alın',
+    and_sell: 'Ve Enerji Ticaret Platformunda satış yapın',
     policy:
       'Üye olarak Solar Bankers Kullanıcı Sözleşmesi, Gizlilik Politikası ve Çerez Politikasını kabul etmiş olursunuz.',
     dont_have_acc: 'Hesabınız yok mu ?',

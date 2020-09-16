@@ -63,6 +63,8 @@ export const en = {
     add_to_my_wallet: 'Add To My Wallet',
   },
   info: {
+    get_green: 'Get green energy from the sun',
+    and_sell: 'And sell on Energy Trading Platform',
     policy: 'By clicking sign up, you agree to the Solar Bankers User Agreement, Privacy Policy, and Cookie Policy.',
     dont_have_acc: "Don't have an account ?",
     have_acc: 'Already have an account ?',

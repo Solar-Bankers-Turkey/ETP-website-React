@@ -9,6 +9,7 @@ import SettingsIcon from '../../../Icons/SettingsIcon'
 import ChainIcon from '../../../Icons/ChainIcon'
 import SolarPanelIcon from '../../../Icons/SolarPanelIcon'
 import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
+import LanguageIcon from '../../../Icons/LanguageIcon'
 
 const Sidebar = () => {
   const { t } = useLocalizationContext()
@@ -42,6 +43,9 @@ const Sidebar = () => {
           <NavLink icon={<ChainIcon />} url={dashboardLinks.solar_node} text={t.pageNames.solar_node}></NavLink>
         </ul>
       </nav>
+      <div className={styles.changeLanguage}>
+        <LanguageIcon />
+      </div>
     </div>
   )
 }
