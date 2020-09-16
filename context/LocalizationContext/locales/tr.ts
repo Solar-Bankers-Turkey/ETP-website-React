@@ -36,6 +36,7 @@ export const tr = {
     year: 'Yıl',
   },
   form: {
+    email_address: 'E-Posta Adresi',
     name: 'İsim',
     lastname: 'Soy İsim',
     email: 'E-Posta',
@@ -46,6 +47,7 @@ export const tr = {
     upload: 'Yükle',
     submit: 'Kabul et',
     add: 'Ekle',
+    password: 'Şifre',
     forgot_password: 'Şifremi Unuttum',
     current_password: 'Şu anki Şifre',
     new_password: 'Yeni Şifre',
@@ -61,6 +63,10 @@ export const tr = {
     add_to_my_wallet: 'Cüzdanıma Ekle',
   },
   info: {
+    policy:
+      'Üye olarak Solar Bankers Kullanıcı Sözleşmesi, Gizlilik Politikası ve Çerez Politikasını kabul etmiş olursunuz.',
+    dont_have_acc: 'Hesabınız yok mu ?',
+    have_acc: 'Hesabınız var mı ?',
     device_not_own: 'Size ait olmayan bir cihaz görürseniz, lütfen destek ekibimizle iletişime geçin.',
     image_info_1000: 'PNG veya JPG. En fazla 1000 piksel genişliğinde ve yüksekliğinde olabilir.',
     password_requirments: {

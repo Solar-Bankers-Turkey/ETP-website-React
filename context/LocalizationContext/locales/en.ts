@@ -36,6 +36,7 @@ export const en = {
     year: 'Year',
   },
   form: {
+    email_address: 'Email Address',
     name: 'Name',
     lastname: 'Lastname',
     email: 'Email',
@@ -46,6 +47,7 @@ export const en = {
     upload: 'Upload',
     submit: 'Submit',
     add: 'Add',
+    password: 'Password',
     forgot_password: 'Forgot Password?',
     current_password: 'Current Password',
     new_password: 'New Password',
@@ -61,6 +63,9 @@ export const en = {
     add_to_my_wallet: 'Add To My Wallet',
   },
   info: {
+    policy: 'By clicking sign up, you agree to the Solar Bankers User Agreement, Privacy Policy, and Cookie Policy.',
+    dont_have_acc: "Don't have an account ?",
+    have_acc: 'Already have an account ?',
     device_not_own: 'If you see a device that you do not own, please contact our support team',
     image_info_1000: 'PNG or JPG. maximum 1000 pixel width and height',
     password_requirments: {

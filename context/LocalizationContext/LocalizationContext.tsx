@@ -9,12 +9,12 @@ const languages = {
 
 export const LocalizationContext = createContext(undefined)
 
-let language = 'tr'
+let language = 'en'
 if (typeof window !== 'undefined' && window.localStorage !== null) {
   const preferedLanguage = window.localStorage.getItem('etp-language')
   language = preferedLanguage || window.navigator['userLanguage'] || window.navigator.language
   if (!language) {
-    language = 'tr'
+    language = 'en'
   }
 }
 
