@@ -15,6 +15,12 @@ if (typeof window !== 'undefined' && window.localStorage !== null) {
   language = preferedLanguage || window.navigator['userLanguage'] || window.navigator.language
   if (!language) {
     language = 'en'
+  } else if (language.includes('en')) {
+    language = 'en'
+  } else if (language.includes('tr')) {
+    language = 'tr'
+  } else {
+    language = 'en'
   }
 }
 

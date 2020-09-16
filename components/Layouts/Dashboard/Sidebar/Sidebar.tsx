@@ -13,6 +13,7 @@ import LanguageIcon from '../../../Icons/LanguageIcon'
 
 const Sidebar = () => {
   const { t } = useLocalizationContext()
+
   return (
     <div className={styles.container}>
       <div className={styles.logo}>ETP</div>
