@@ -9,6 +9,7 @@ import data1 from './moctData_1.json'
 import data2 from './moctData_2.json'
 import data3 from './moctData_3.json'
 import data4 from './moctData_4.json'
+import { useLocalizationContext } from '../../../../../context/LocalizationContext/LocalizationContext'
 const dataSeries = {
   day: data1,
   week: data2,
@@ -16,6 +17,7 @@ const dataSeries = {
   year: data4,
 }
 const ChartSection = () => {
+  const { t } = useLocalizationContext()
   const [selected, setSelected] = useState('day')
   const [data, setData] = useState(dataSeries[selected])
   useEffect(() => {
@@ -28,16 +30,16 @@ const ChartSection = () => {
           <h1>Energy Consumption</h1>
           <div className={styles.btn_group}>
             <Button onClick={() => setSelected('day')} variant={selected === 'day' ? 'selected' : 'ghost'}>
-              Day
+              {t.common.day}
             </Button>
             <Button onClick={() => setSelected('week')} variant={selected === 'week' ? 'selected' : 'ghost'}>
-              Week
+              {t.common.week}
             </Button>
             <Button onClick={() => setSelected('month')} variant={selected === 'month' ? 'selected' : 'ghost'}>
-              Month
+              {t.common.month}
             </Button>
             <Button onClick={() => setSelected('year')} variant={selected === 'year' ? 'selected' : 'ghost'}>
-              Year
+              {t.common.year}
             </Button>
           </div>
         </div>

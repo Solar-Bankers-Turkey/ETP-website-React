@@ -104,7 +104,6 @@ const BarChart = () => {
         motionStiffness={90}
         motionDamping={15}
         tooltip={({ id, value, color, data }) => {
-          console.log(data)
           return (
             <strong style={{ color }}>
               {data.day}: {data.min + '℃'} - {parseFloat(data.min as string) + parseFloat(data.max as string) + '℃'}

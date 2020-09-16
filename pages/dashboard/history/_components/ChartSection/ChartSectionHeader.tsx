@@ -4,16 +4,18 @@ import styles from './ChartSection.module.css'
 import BarChartIcon from '../../../../../components/Icons/BarChartIcon'
 import TimeLineIcon from '../../../../../components/Icons/TimeLineIcon'
 import Button from '../../../../../components/Button/Button'
+import { useLocalizationContext } from '../../../../../context/LocalizationContext/LocalizationContext'
 
 interface Props {
   chartType: 'bar' | 'line'
   setChartType: React.Dispatch<React.SetStateAction<string>>
 }
 const BarChartHeader = ({ chartType, setChartType }: Props) => {
+  const { t } = useLocalizationContext()
   const [chartRange, setChartRange] = useState('day')
   return (
     <div className={styles.header}>
-      <h1 className={styles.title}>History Of Activities</h1>
+      <h1 className={styles.title}>{t.common.history_of_activities}</h1>
       <div className={styles.icon_group}>
         <div onClick={() => setChartType('bar')}>
           <BarChartIcon color={chartType === 'bar' ? 'var(--primary-color)' : 'currentColor'} />

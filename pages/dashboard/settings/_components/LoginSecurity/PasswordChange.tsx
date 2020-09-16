@@ -1,26 +1,26 @@
 import React from 'react'
 import styles from './PasswordChange.module.css'
 import Input from '../../../../../components/Input/Input'
+import { useLocalizationContext } from '../../../../../context/LocalizationContext/LocalizationContext'
 const PasswordChange = () => {
+  const { t } = useLocalizationContext()
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Change Password</h1>
+      <h1 className={styles.title}>{t.form.change_password}</h1>
       <div className={styles.change_password_container}>
         <form className={styles.password_form}>
-          <Input label="Current Password" type="password" />
-          <h1>Forgot Password?</h1>
-          <Input label="New Password" type="password" />
-          <Input label="Confirm Password" type="password" />
+          <Input label={t.form.current_password} type="password" />
+          <h1>{t.form.forgot_password}</h1>
+          <Input label={t.form.new_password} type="password" />
+          <Input label={t.form.confirm_password} type="password" />
         </form>
         <div className={styles.password_info_container}>
-          <h1>Password Requirments</h1>
-          <p>You must follow all the rules below to create a new password</p>
+          <h1>{t.info.password_requirments.title}</h1>
+          <p>{t.info.password_requirments.info}</p>
           <ul>
-            <li>At least 8 characters</li>
-            <li>A mixture of both uppercase and lowercase letters</li>
-            <li>A mixture of letters and numbers</li>
-            <li>Inclusion of at least one special character [!&nbsp;@&nbsp;#&nbsp;?]</li>
-            <li>Cannot be the same as the previous password</li>
+            {t.info.password_requirments.option.map(e => {
+              return <li>{e}</li>
+            })}
           </ul>
         </div>
       </div>

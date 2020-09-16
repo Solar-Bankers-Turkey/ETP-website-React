@@ -159,6 +159,7 @@
 }
 
 .btn_username {
+  padding-left: 0.5rem;
   user-select: none;
   cursor: pointer;
   color: var(--text-color-secondary-light);

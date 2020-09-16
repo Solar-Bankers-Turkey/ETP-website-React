@@ -9,11 +9,13 @@ import MailIcon from '../../../Icons/MailIcon'
 import BellIcon from '../../../Icons/BellIcon'
 import IconButton from '../../../Button/IconButton'
 import HeaderMenu from './HeaderMenu'
+import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
 
 interface Props {
   sidebarToggleHandler: () => void
 }
 const Header = ({ sidebarToggleHandler }) => {
+  const { t } = useLocalizationContext()
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -35,7 +37,7 @@ const Header = ({ sidebarToggleHandler }) => {
           </div>
           <span className={styles.coin_amount}>50.000</span>
           <span className={styles.coin_name}>IYTECOIN</span>
-          <button className={styles.btn_reload}>RELOAD</button>
+          <button className={styles.btn_reload}>{t.common.reload}</button>
         </div>
         <div className={styles.energy_container}>
           <div className={styles.solar_icon}>
@@ -71,7 +73,7 @@ const Header = ({ sidebarToggleHandler }) => {
           icon={<BellIcon />}
         ></IconButton>
 
-        <div className={styles.btn_username}>Hello,&nbsp;Username</div>
+        <div className={styles.btn_username}>{t.common.hello},&nbsp;Username</div>
       </div>
       <HeaderMenu anchorEl={anchorEl} menuName={anchorEl?.id} handleClose={handleClose} />
     </header>

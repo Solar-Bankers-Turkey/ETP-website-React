@@ -5,39 +5,41 @@ import IndustryIcon from '../../../../../components/Icons/IndustryIcon'
 import WarningIcon from '../../../../../components/Icons/WarningIcon'
 import InfoIcon from '../../../../../components/Icons/InfoIcon'
 import SettingsIconSolid from '../../../../../components/Icons/SettingsIconSolid'
+import { useLocalizationContext } from '../../../../../context/LocalizationContext/LocalizationContext'
 const Info = () => {
+  const { t } = useLocalizationContext()
   return (
     <div className={styles.info}>
       <div className={styles.info_group}>
         <div className={styles.info_card}>
-          <h1>Income</h1>
+          <h1>{t.common.income}</h1>
           <div className={styles.icon_with_text}>
             <div className={styles.icon}>
               <MoneyIcon />
             </div>
             <div className={styles.text}>
-              <h2>Total</h2>
+              <h2>{t.common.total}</h2>
               <h3>3.500 ₺</h3>
             </div>
           </div>
         </div>
         <div className={styles.info_card}>
           <h1>
-            TOTAL CO<sub>2</sub> Savings
+            {t.common.total} CO<sub>2</sub> {t.common.savings}
           </h1>
           <div className={styles.icon_with_text}>
             <div style={{ marginBottom: '5px' }} className={styles.icon}>
               <IndustryIcon />
             </div>
             <div className={styles.text}>
-              <h2>Total</h2>
+              <h2>{t.common.total}</h2>
               <h3>29.99 G</h3>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.notification_container}>
-        <h1>Last Notifications</h1>
+        <h1>{t.common.last_notifications}</h1>
         <ul className={styles.notification_list}>
           <li className={styles.notification_list_item}>
             <div className={styles.notification_list_item_icon}>

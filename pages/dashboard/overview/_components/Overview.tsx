@@ -4,25 +4,28 @@ import styles from './Overview.module.css'
 import LineChart from './LineChart/LineChart'
 import BarChart from './BarChart/BarChart'
 import SunImage from '../../../../components/Icons/SunImage'
+import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
 const Overview = () => {
+  const { t } = useLocalizationContext()
+
   return (
     <div className={styles.section}>
       <div className={styles.header}>
-        <h1>Overview</h1>
+        <h1>{t.pageNames.overview}</h1>
       </div>
       <div className={styles.container}>
         <div className={styles.o_info_container}>
           <Info />
         </div>
         <div className={styles.o_chart_container}>
-          <h1>energy balance this week</h1>
+          <h1>{t.common.energy_balance_this_week}</h1>
           <LineChart />
         </div>
 
         <div className={styles.weather_section}>
           <div className={styles.weather_section_header}>
-            <h1>Today's Weather Report</h1>
-            <h2>Weekly Weather Report</h2>
+            <h1>{t.common.today_weather_report}</h1>
+            <h2>{t.common.weekly_weather_report}</h2>
           </div>
           <div className={styles.weather_cart_group}>
             <div className={styles.current_weather_container}>

@@ -8,8 +8,10 @@ import RefreshIcon from '../../../Icons/RefreshIcon'
 import SettingsIcon from '../../../Icons/SettingsIcon'
 import ChainIcon from '../../../Icons/ChainIcon'
 import SolarPanelIcon from '../../../Icons/SolarPanelIcon'
+import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
 
 const Sidebar = () => {
+  const { t } = useLocalizationContext()
   return (
     <div className={styles.container}>
       <div className={styles.logo}>ETP</div>
@@ -24,28 +26,20 @@ const Sidebar = () => {
       </div>
       <nav className={styles.nav_container}>
         <ul className={styles.nav_list}>
-          <NavLink icon={<HomeIcon />} url={dashboardLinks.overview.url} text={dashboardLinks.overview.name}></NavLink>
+          <NavLink icon={<HomeIcon />} url={dashboardLinks.overview} text={t.pageNames.overview}></NavLink>
           <NavLink
             icon={<SolarPanelIcon />}
-            url={dashboardLinks.energy_market.url}
-            text={dashboardLinks.energy_market.name}
+            url={dashboardLinks.energy_market}
+            text={t.pageNames.energy_market}
           ></NavLink>
           <NavLink
             icon={<StatisticIcon />}
-            url={dashboardLinks.iot_device_stauts.url}
-            text={dashboardLinks.iot_device_stauts.name}
+            url={dashboardLinks.iot_device_status}
+            text={t.pageNames.iot_device_status}
           ></NavLink>
-          <NavLink icon={<RefreshIcon />} url={dashboardLinks.history.url} text={dashboardLinks.history.name}></NavLink>
-          <NavLink
-            icon={<SettingsIcon />}
-            url={dashboardLinks.settings.url}
-            text={dashboardLinks.settings.name}
-          ></NavLink>
-          <NavLink
-            icon={<ChainIcon />}
-            url={dashboardLinks.solar_node.url}
-            text={dashboardLinks.solar_node.name}
-          ></NavLink>
+          <NavLink icon={<RefreshIcon />} url={dashboardLinks.history} text={t.pageNames.history}></NavLink>
+          <NavLink icon={<SettingsIcon />} url={dashboardLinks.settings} text={t.pageNames.settings}></NavLink>
+          <NavLink icon={<ChainIcon />} url={dashboardLinks.solar_node} text={t.pageNames.solar_node}></NavLink>
         </ul>
       </nav>
     </div>

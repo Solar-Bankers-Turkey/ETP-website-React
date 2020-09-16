@@ -5,6 +5,8 @@ import Router, { useRouter } from 'next/router'
 import NProgress from 'nprogress' //nprogress module
 import 'nprogress/nprogress.css' //styles of nprogress
 import AuthLayout from '../components/Layouts/Auth/AuthLayout'
+import { LocalizationContextProvider } from '../context/LocalizationContext/LocalizationContext'
+import { useLayoutEffect, useState } from 'react'
 
 const DefaultLayout = ({ children }) => (
   <div className="default-container">
@@ -28,20 +30,27 @@ Router.events.on('routeChangeError', () => NProgress.done())
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const page = router.pathname.split('/')[1]
+  const [lng, setLng] = useState('en')
 
   let Layout = DashboardLayout
-  if (page !== 'dashboard') {
+  if (page === 'dashboard') {
+    Layout = DashboardLayout
+  } else {
     Layout = AuthLayout
   }
+
   return (
     <>
       <Head>
         <title>Energy Trading Platform</title>
+
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <LocalizationContextProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </LocalizationContextProvider>
     </>
   )
 }

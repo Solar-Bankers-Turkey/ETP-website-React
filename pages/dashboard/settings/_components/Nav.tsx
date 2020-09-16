@@ -9,10 +9,11 @@ import DeviceIcon from '../../../../components/Icons/DeviceIcon'
 import RightArrowIcon from '../../../../components/Icons/RightArrowIcon'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
 
 const Nav = () => {
   const router = useRouter()
-
+  const { t } = useLocalizationContext()
   return (
     <nav className={styles.nav_container}>
       <ul className={styles.nav_list}>
@@ -27,7 +28,7 @@ const Nav = () => {
               <div className={styles.nav_list_item_icon}>
                 <ProfileIcon />
               </div>
-              <div className={styles.nav_list_item_text}>profile</div>
+              <div className={styles.nav_list_item_text}>{t.common.profile}</div>
               <div className={styles.right_arrow}>
                 <RightArrowIcon />
               </div>
@@ -46,7 +47,7 @@ const Nav = () => {
               <div className={styles.nav_list_item_icon}>
                 <LockIcon />
               </div>
-              <div className={styles.nav_list_item_text}>login & security</div>
+              <div className={styles.nav_list_item_text}>{t.common.security}</div>
               <div className={styles.right_arrow}>
                 <RightArrowIcon />
               </div>
@@ -65,7 +66,7 @@ const Nav = () => {
               <div className={styles.nav_list_item_icon}>
                 <CreditCardIcon />
               </div>
-              <div className={styles.nav_list_item_text}>payment</div>
+              <div className={styles.nav_list_item_text}>{t.common.payment}</div>
               <div className={styles.right_arrow}>
                 <RightArrowIcon />
               </div>
@@ -83,7 +84,7 @@ const Nav = () => {
               <div className={styles.nav_list_item_icon}>
                 <BellIcon />
               </div>
-              <div className={styles.nav_list_item_text}>notifications</div>
+              <div className={styles.nav_list_item_text}>{t.common.notifications}</div>
               <div className={styles.right_arrow}>
                 <RightArrowIcon />
               </div>
@@ -102,7 +103,7 @@ const Nav = () => {
               <div className={styles.nav_list_item_icon}>
                 <DeviceIcon />
               </div>
-              <div className={styles.nav_list_item_text}>device</div>
+              <div className={styles.nav_list_item_text}>{t.common.device}</div>
               <div className={styles.right_arrow}>
                 <RightArrowIcon />
               </div>
