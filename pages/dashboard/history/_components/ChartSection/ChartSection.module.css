@@ -10,8 +10,6 @@
   flex-direction: column;
   overflow: hidden;
 }
-.grid-container {
-}
 
 .header {
   display: flex;

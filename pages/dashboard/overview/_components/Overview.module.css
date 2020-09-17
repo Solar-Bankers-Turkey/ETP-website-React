@@ -132,11 +132,11 @@
 }
 
 .line_chart {
-  width: 99%;
+  max-width: 99%;
   overflow: hidden;
 }
 .bar_chart {
-  width: 99%;
+  max-width: 99%;
   overflow: hidden;
   height: 100%;
 }
@@ -165,5 +165,11 @@
     h2 {
       flex: 1 !important;
     }
+  }
+}
+
+@media (max-width: 550px) {
+  .weather_section_header {
+    display: none;
   }
 }

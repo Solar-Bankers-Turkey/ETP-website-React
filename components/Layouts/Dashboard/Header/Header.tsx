@@ -49,6 +49,7 @@ const Header = ({ sidebarToggleHandler }) => {
         <div className={styles.battery_icon}>
           <BatteryIcon />
         </div>
+        <span className={styles.battery_number}>50%</span>
         <div className={styles.battery_indicator}>
           <div className={styles.battery_fill}></div>
         </div>

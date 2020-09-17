@@ -17,6 +17,7 @@ const Overview = () => {
         <div className={styles.o_info_container}>
           <Info />
         </div>
+
         <div className={styles.o_chart_container}>
           <h1>{t.common.energy_balance_this_week}</h1>
           <LineChart />
