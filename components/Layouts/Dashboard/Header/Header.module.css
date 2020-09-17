@@ -7,9 +7,19 @@
   align-items: center;
 }
 
-@media (max-width: 940px) {
+.header_info_floating {
+  display: none;
+}
+@media (max-width: 860px) {
   .info_container {
     display: none !important;
+  }
+  .header_info_floating {
+    display: block;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 500;
   }
   .container {
     justify-content: space-between;
@@ -38,7 +48,7 @@
   align-items: center;
 }
 .coin_container {
-  margin-right: 3rem;
+  margin-right: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

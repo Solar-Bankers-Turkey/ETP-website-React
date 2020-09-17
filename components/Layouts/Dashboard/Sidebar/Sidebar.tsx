@@ -4,7 +4,7 @@ import NavLink from './NavLink'
 import { dashboardLinks } from '../../../../utils/dashboardLinks'
 import HomeIcon from '../../../Icons/HomeIcon'
 import StatisticIcon from '../../../Icons/StatisticIcon'
-import RefreshIcon from '../../../Icons/RefreshIcon'
+import HistoryIcon from '../../../Icons/HistoryIcon'
 import SettingsIcon from '../../../Icons/SettingsIcon'
 import ChainIcon from '../../../Icons/ChainIcon'
 import SolarPanelIcon from '../../../Icons/SolarPanelIcon'
@@ -39,7 +39,7 @@ const Sidebar = () => {
             url={dashboardLinks.iot_device_status}
             text={t.pageNames.iot_device_status}
           ></NavLink>
-          <NavLink icon={<RefreshIcon />} url={dashboardLinks.history} text={t.pageNames.history}></NavLink>
+          <NavLink icon={<HistoryIcon />} url={dashboardLinks.history} text={t.pageNames.history}></NavLink>
           <NavLink icon={<SettingsIcon />} url={dashboardLinks.settings} text={t.pageNames.settings}></NavLink>
           <NavLink icon={<ChainIcon />} url={dashboardLinks.solar_node} text={t.pageNames.solar_node}></NavLink>
         </ul>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RefreshIcon = () => {
+const HistoryIcon = () => {
   return (
     <svg
       aria-hidden="true"
@@ -19,4 +19,4 @@ const RefreshIcon = () => {
   )
 }
 
-export default RefreshIcon
+export default HistoryIcon

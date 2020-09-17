@@ -2,14 +2,13 @@ import React, { useState } from 'react'
 
 import styles from './Header.module.css'
 import BarsIcon from '../../../Icons/BarsIcon'
-import LockIcon from '../../../Icons/LockIcon'
-import SolarPanelIcon from '../../../Icons/SolarPanelIcon'
-import BatteryIcon from '../../../Icons/BatteryIcon'
 import MailIcon from '../../../Icons/MailIcon'
 import BellIcon from '../../../Icons/BellIcon'
 import IconButton from '../../../Button/IconButton'
 import HeaderMenu from './HeaderMenu'
 import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
+import HeaderInfo from './HeaderInfo'
+import HeaderInfoFloating from './HeaderInfoFloating'
 
 interface Props {
   sidebarToggleHandler: () => void
@@ -30,29 +29,10 @@ const Header = ({ sidebarToggleHandler }) => {
       <div className={styles.sidebar_toggle} onClick={sidebarToggleHandler}>
         <BarsIcon />
       </div>
-      <div className={styles.info_container}>
-        <div className={styles.coin_container}>
-          <div className={styles.lock_icon}>
-            <LockIcon></LockIcon>
-          </div>
-          <span className={styles.coin_amount}>50.000</span>
-          <span className={styles.coin_name}>IYTECOIN</span>
-          <button className={styles.btn_reload}>{t.common.reload}</button>
-        </div>
-        <div className={styles.energy_container}>
-          <div className={styles.solar_icon}>
-            <SolarPanelIcon />
-          </div>
-          <div className={styles.solar_value}>2.6</div>
-          <div className={styles.solar_text}>KWH</div>
-        </div>
-        <div className={styles.battery_icon}>
-          <BatteryIcon />
-        </div>
-        <span className={styles.battery_number}>50%</span>
-        <div className={styles.battery_indicator}>
-          <div className={styles.battery_fill}></div>
-        </div>
+
+      <HeaderInfo />
+      <div className={styles.header_info_floating}>
+        <HeaderInfoFloating />
       </div>
 
       <div className={styles.btn_group}>
