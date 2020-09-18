@@ -7,7 +7,10 @@ const AuthLayout = ({ children }) => {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <div className={styles.image_container}>
+        <div className={styles.video_container}>
+          <video autoPlay muted loop id="System.mp4">
+            <source src="/System.mp4" type="video/mp4" />
+          </video>
           <div className={styles.text_group}>
             <p className={styles.text_1}>{t.info.get_green}</p>
             <p className={styles.text_2}>{t.info.and_sell}</p>

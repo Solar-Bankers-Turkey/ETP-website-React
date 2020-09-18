@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import styles from './DashboardLayout.module.css'
 import Header from './Header/Header'
 import Sidebar from './Sidebar/Sidebar'
+import SidebarFooter from './Sidebar/SidebarFooter'
 
 const DashboardLayout = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(true)
@@ -27,6 +28,7 @@ const DashboardLayout = ({ children }) => {
     <div className={styles.container}>
       <div className={isSidebarOpen ? styles.sidebar : styles.sidebar_closed}>
         <Sidebar></Sidebar>
+        <SidebarFooter />
       </div>
 
       <div className={styles.body}>

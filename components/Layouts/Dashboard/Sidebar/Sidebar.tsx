@@ -44,9 +44,6 @@ const Sidebar = () => {
           <NavLink icon={<ChainIcon />} url={dashboardLinks.solar_node} text={t.pageNames.solar_node}></NavLink>
         </ul>
       </nav>
-      <div className={styles.changeLanguage}>
-        <LanguageIcon />
-      </div>
     </div>
   )
 }
