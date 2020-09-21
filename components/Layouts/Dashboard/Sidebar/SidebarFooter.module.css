@@ -1,17 +1,3 @@
 .container {
   margin-top: auto;
 }
-
-.select_container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-color-primary);
-}
-.select_select {
-  box-sizing: inherit;
-  font: inherit;
-  outline: none;
-  appearance: none;
-}

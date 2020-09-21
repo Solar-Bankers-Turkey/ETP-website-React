@@ -165,10 +165,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  & > div {
+  & > details {
     margin-right: 1rem;
   }
-  & > div:last-child {
+  & > details:last-child {
     margin: 0;
   }
 }
