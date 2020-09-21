@@ -9,7 +9,6 @@
     "build-export": "next build && next export && serve out"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
     "@next/bundle-analyzer": "^9.5.3",
     "@nivo/bar": "^0.62.0",
     "@nivo/line": "^0.62.0",
