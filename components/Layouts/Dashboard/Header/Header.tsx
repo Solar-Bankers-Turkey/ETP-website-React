@@ -66,11 +66,9 @@ const Header = ({ sidebarToggleHandler }) => {
             <div className={styles.btn_username}>{t.common.hello},&nbsp;Username</div>
           </DropdownButton>
           <DropdownMenu>
-            <DropdownItem>
-              <DropdownItem>Profile</DropdownItem>
-              <DropdownItem>Settings</DropdownItem>
-              <DropdownItem>Log Out</DropdownItem>
-            </DropdownItem>
+            <DropdownItem>Profile</DropdownItem>
+            <DropdownItem>Settings</DropdownItem>
+            <DropdownItem>Log Out</DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </div>
