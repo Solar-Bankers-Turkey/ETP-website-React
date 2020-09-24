@@ -33,7 +33,7 @@
   align-items: flex-start;
   width: max-content;
   background-color: #31363f;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 4px;
   margin-top: 8px;
   padding: 0.5rem 0rem;
@@ -44,18 +44,15 @@
   z-index: 2;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  &:hover {
-    background: #414753;
-  }
-  span {
-    padding: 0px 8px;
-    color: white;
-  }
   user-select: none;
-  color: #ffffff;
-  text-align: center;
+  color: var(--text-color-primary);
+  text-align: start;
   cursor: pointer;
   &:hover {
     color: #40bad5;
+  }
+
+  &:hover {
+    background: #414753;
   }
 }
