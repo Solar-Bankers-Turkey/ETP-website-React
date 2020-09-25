@@ -1,4 +1,5 @@
 import React from 'react'
+import PageHeader from '../../_components/PageHeader'
 import Nav from './Nav'
 
 import styles from './Settings.module.css'
@@ -6,9 +7,9 @@ import styles from './Settings.module.css'
 const Settings = ({ children }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
+      <PageHeader>
         <h1>Settings</h1>
-      </div>
+      </PageHeader>
       <div className={styles.content}>
         <Nav></Nav>
         <section>{children}</section>

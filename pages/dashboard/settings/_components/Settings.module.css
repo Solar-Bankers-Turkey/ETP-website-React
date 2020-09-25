@@ -8,18 +8,6 @@
   }
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 1rem;
-  text-transform: capitalize;
-
-  & > h1 {
-    width: 100%;
-  }
-}
 .content {
   display: grid;
   grid-template-columns: 1fr 5fr;

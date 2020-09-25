@@ -179,3 +179,10 @@
   cursor: pointer;
   color: var(--text-color-secondary-light);
 }
+
+.energy_container:hover {
+  & > * {
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+}

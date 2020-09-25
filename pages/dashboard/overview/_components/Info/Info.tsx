@@ -6,6 +6,7 @@ import WarningIcon from '../../../../../components/Icons/WarningIcon'
 import InfoIcon from '../../../../../components/Icons/InfoIcon'
 import SettingsIconSolid from '../../../../../components/Icons/SettingsIconSolid'
 import { useLocalizationContext } from '../../../../../context/LocalizationContext/LocalizationContext'
+
 const Info = () => {
   const { t } = useLocalizationContext()
   return (

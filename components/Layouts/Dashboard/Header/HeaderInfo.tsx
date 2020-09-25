@@ -4,6 +4,8 @@ import SolarPanelIcon from '../../../Icons/SolarPanelIcon'
 import BatteryIcon from '../../../Icons/BatteryIcon'
 import styles from './Header.module.css'
 import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
+import Link from 'next/link'
+
 const HeaderInfo = () => {
   const { t } = useLocalizationContext()
   return (
@@ -14,15 +16,17 @@ const HeaderInfo = () => {
         </div>
         <span className={styles.coin_amount}>50.000</span>
         <span className={styles.coin_name}>IYTECOIN</span>
-        {/* <button className={styles.btn_reload}>{t.common.reload}</button> */}
+        <button className={styles.btn_reload}>{t.common.reload}</button>
       </div>
-      <div className={styles.energy_container}>
-        <div className={styles.solar_icon}>
-          <SolarPanelIcon />
+      <Link href="/dashboard/battery">
+        <div className={styles.energy_container}>
+          <div className={styles.solar_icon}>
+            <SolarPanelIcon />
+          </div>
+          <div className={styles.solar_value}>2.6</div>
+          <div className={styles.solar_text}>KWH</div>
         </div>
-        <div className={styles.solar_value}>2.6</div>
-        <div className={styles.solar_text}>KWH</div>
-      </div>
+      </Link>
       <div className={styles.battery_icon}>
         <BatteryIcon />
       </div>
