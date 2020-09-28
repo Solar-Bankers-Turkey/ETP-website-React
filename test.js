@@ -1,75 +1,24 @@
 let fs = require('fs')
-let data = []
+let rawdata = JSON.parse(fs.readFileSync('data.json'))
 
-const sign = 1
+const data = []
 
-for (let index = 0; index < 30; index++) {
-  let value = Math.random() * 10 + 5
-  value = value.toFixed(2)
-  data.push(value * sign)
+const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+
+let selectDay = 0
+for (let i = 1; i < rawdata.length; i++) {
+  console.log(rawdata[i])
+  const dataItem = {
+    name: weekDays[selectDay],
+    value: rawdata[i].value,
+    hour: (i % 24) + 1,
+  }
+
+  if (i % 24 === 0) {
+    selectDay++
+  }
+
+  data.push(dataItem)
 }
 
-for (let index = 0; index < 10; index++) {
-  let value = Math.random() * 40 + 15
-  value = value.toFixed(2)
-  data.push(value * sign)
-}
-
-for (let index = 0; index < 10; index++) {
-  let value = Math.random() * 40 + 25
-  value = value.toFixed(2)
-  data.push(value * sign)
-}
-for (let index = 0; index < 5; index++) {
-  let value = Math.random() * 40 + 30
-  value = value.toFixed(2)
-  data.push(value * sign)
-}
-for (let index = 0; index < 5; index++) {
-  let value = Math.random() * 40 + 35
-  value = value.toFixed(2)
-  data.push(value * sign)
-}
-for (let index = 0; index < 5; index++) {
-  let value = Math.random() * 35 + 30
-  value = value.toFixed(2)
-  data.push(value * sign)
-}
-for (let index = 0; index < 5; index++) {
-  let value = Math.random() * 30 + 25
-  value = value.toFixed(2)
-  data.push(value * sign)
-}
-for (let index = 0; index < 5; index++) {
-  let value = Math.random() * 15 + 5
-  value = value.toFixed(2)
-  data.push(value * sign)
-}
-
-for (let index = 0; index < 5; index++) {
-  let value = Math.random() * 5
-  value = value.toFixed(2)
-  data.push(value * sign)
-}
-
-while (data.length < 168) {
-  data.push(null)
-}
-
-// let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-// let selectDate = 0
-// const categorizedData = data.map((e, i) => {
-//   const obj = {
-//     x: days[selectDate],
-//     y: e,
-//   }
-
-//   if (i % 24 === 0 && i !== 0 && i > 71) {
-//     selectDate++
-//   }
-
-//   return obj
-// })
-
-console.log(categorizedData)
-fs.writeFileSync('mockFeed.json', JSON.stringify(categorizedData))
+fs.writeFileSync('data.json', JSON.stringify(data))
