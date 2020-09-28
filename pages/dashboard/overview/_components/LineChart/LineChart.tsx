@@ -42,8 +42,6 @@ const LineChart = React.memo(function LineChart() {
 export default LineChart
 
 function CustomTooltip({ active, payload }) {
-  console.log(payload)
-
   if (!payload) return null
   if (active) {
     const data = payload[0].payload

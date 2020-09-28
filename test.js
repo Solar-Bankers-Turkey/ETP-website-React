@@ -1,5 +1,5 @@
 let fs = require('fs')
-let rawdata = JSON.parse(fs.readFileSync('data.json'))
+let rawdata = JSON.parse(fs.readFileSync('pages/dashboard/overview/_components/LineChart/mockData.json'))
 
 const data = []
 
@@ -7,10 +7,12 @@ const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 let selectDay = 0
 for (let i = 1; i < rawdata.length; i++) {
-  console.log(rawdata[i])
+  if (rawdata[i].value === 0) {
+    rawdata[i].value = Math.random() * 4 + 1
+  }
   const dataItem = {
     name: weekDays[selectDay],
-    value: rawdata[i].value,
+    value: Math.round(rawdata[i].value),
     hour: (i % 24) + 1,
   }
 
@@ -21,4 +23,4 @@ for (let i = 1; i < rawdata.length; i++) {
   data.push(dataItem)
 }
 
-fs.writeFileSync('data.json', JSON.stringify(data))
+fs.writeFileSync('pages/dashboard/overview/_components/LineChart/mockData.json', JSON.stringify(data))

@@ -5,7 +5,7 @@ import PageHeader from '../../_components/PageHeader'
 import styles from './Battery.module.css'
 import CardList from '../../_components/Battery-Solar-Info/CardList'
 import CardRowList from '../../_components/Battery-Solar-Info/CardRowList'
-import BatteryIcon from '../../../../components/Icons/BatteryIcon'
+import BatteryIconTwoColor from './BatteryIconTwoColor'
 import Card from '../../_components/Battery-Solar-Info/Card'
 import CardRow from '../../_components/Battery-Solar-Info/CardRow'
 
@@ -25,7 +25,7 @@ const Battery = () => {
           <h1>{t.battery_page.capacity}</h1>
           <div className={styles.icon_with_text}>
             <div className={styles.icon}>
-              <BatteryIcon />
+              <BatteryIconTwoColor percentage="70%" />
             </div>
             <div className={styles.text_group}>
               <h1>%70</h1>
