@@ -97,4 +97,18 @@ export const en = {
     output_current: 'Output Current',
     output_freq: 'Output Frequency',
   },
+  solar_page: {
+    solar_panel: 'Solar Panel',
+    dc_power_value: 'DC Power Value',
+    dc_current_value: 'DC Current Value',
+    dc_voltage_value: 'DC Voltage Value',
+    r_phase_voltage: 'R Phase Voltage',
+    s_phase_voltage: 'S Phase Voltage',
+    t_phase_voltage: 'T Phase Voltage',
+    r_phase_current: 'R Phase Current',
+    s_phase_current: 'S Phase Current',
+    t_phase_current: 'T Phase Current',
+    tempature: 'Tempature',
+    energy_to_battery: 'Energy to Battery',
+  },
 }

@@ -19,14 +19,16 @@ const HeaderInfo = () => {
         <button className={styles.btn_reload}>{t.common.reload}</button>
       </div>
 
-      <div className={styles.energy_container}>
-        <div className={styles.solar_icon}>
-          <SolarPanelIcon />
+      <Link href="/dashboard/solar-info">
+        <div className={styles.energy_container}>
+          <div className={styles.solar_icon}>
+            <SolarPanelIcon />
+          </div>
+          <div className={styles.solar_value}>2.6</div>
+          <div className={styles.solar_text}>KWH</div>
         </div>
-        <div className={styles.solar_value}>2.6</div>
-        <div className={styles.solar_text}>KWH</div>
-      </div>
-      <Link href="/dashboard/battery">
+      </Link>
+      <Link href="/dashboard/battery-info">
         <div className={styles.battery_container}>
           <div className={styles.battery_icon}>
             <BatteryIcon />

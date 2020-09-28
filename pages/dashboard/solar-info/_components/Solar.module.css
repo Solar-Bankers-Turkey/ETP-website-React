@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.battery_info {
+  padding: 1rem;
+  & > h1 {
+    font-weight: 600;
+    color: var(--text-color-secondary);
+  }
+  background: var(--bg-color-primary);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+  width: 260px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .icon_with_text {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    & > .icon {
+      color: var(--primary-color);
+      width: 100px;
+      & > svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    & > .text_group {
+      margin-left: 1rem;
+      color: var(--text-color-primary);
+      font-size: 1.85rem;
+    }
+  }
+}
+
+.card_group {
+  height: 200px;
+
+  & > ul {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    & > li {
+      height: 45%;
+      position: relative;
+      & > h2 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.temp_status_text {
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+  font-weight: 400;
+  color: var(--green);
+}
+
+.info_text {
+  font-size: 1.25rem;
+  color: var(--text-color-primary);
+  position: absolute;
+  bottom: -16px;
+}
