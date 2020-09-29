@@ -1,6 +1,6 @@
 import React from 'react'
-import { DatumValue, Point, ResponsiveLine } from '@nivo/line'
-
+import { ResponsiveLine } from '@nivo/line'
+import styles from './CustomLineChart.module.css'
 interface Props {
   enableArea?: boolean
   customSlice?: 'negative' | 'default'
@@ -158,55 +158,6 @@ function Slice_Default({ slice }) {
           <strong>{point.serieId}</strong> [{point.data.yFormatted}]
         </div>
       ))}
-    </div>
-  )
-}
-
-function Slice_LineChartWithNegativeValues({ slice }) {
-  const CalculatePointValues = () => {
-    let feed = 0
-    let usage = 0
-    if (typeof usage === 'undefined') {
-    }
-    // console.log({ feed: slice?.points[0]?.data.y, usage: slice?.points[1]?.data.y })
-    console.log(slice)
-    return (
-      <>
-        <div
-          style={{
-            color: 'rgb(97, 205, 187)',
-            padding: '3px 0',
-          }}
-        >
-          <strong>Feed</strong> [{slice?.points[0]?.data.y}]
-        </div>
-        <div
-          style={{
-            color: 'rgb(244, 117, 96)',
-            padding: '3px 0',
-          }}
-        >
-          <strong>Feed</strong> [{slice?.points[1]?.data.y}]
-        </div>
-      </>
-    )
-  }
-
-  return (
-    <div
-      style={{
-        background: 'var(--bg-color-primary-dark)',
-        padding: '9px 12px',
-        border: '1px solid var(--border-color-invert-soft)',
-        borderRadius: '4px',
-      }}
-    >
-      <div style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--border-color-invert-soft)' }}>
-        {slice.points[0].data.x}
-      </div>
-      <div style={{ marginBottom: '0.5rem' }}></div>
-
-      <CalculatePointValues />
     </div>
   )
 }

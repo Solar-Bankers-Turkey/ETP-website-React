@@ -11,24 +11,12 @@ const DashboardLayout = ({ children }) => {
     setSidebarOpen(!isSidebarOpen)
   }
 
-  // useEffect(() => {
-  //   window.addEventListener('resize', handleResize)
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize)
-  //   }
-  //   function handleResize() {
-  //     if (window.innerWidth < 1250 && isSidebarOpen) {
-  //       setSidebarOpen(false)
-  //     }
-  //   }
-  // }, [])
-
   return (
     <div className={styles.container}>
       <div className={isSidebarOpen ? styles.sidebar : styles.sidebar_closed}>
         <Sidebar></Sidebar>
-        <SidebarFooter />
+
+        {isSidebarOpen && <SidebarFooter />}
       </div>
 
       <div className={styles.body}>
