@@ -9,6 +9,8 @@ const SunImage = () => {
       id="Layer_1"
       x="0px"
       y="0px"
+      width="24px"
+      height="24px"
       viewBox="0 0 512 512"
       xmlSpace="preserve"
     >

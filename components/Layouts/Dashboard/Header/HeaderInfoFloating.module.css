@@ -68,7 +68,6 @@
     width: 96px;
     height: 8px;
     border-radius: 8px;
-    background: var(--bg-color-primary-light);
     & > .battery_fill {
       border-radius: 8px;
       width: 50%;

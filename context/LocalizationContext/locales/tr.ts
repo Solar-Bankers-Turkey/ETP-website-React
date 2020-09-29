@@ -8,6 +8,8 @@ export const tr = {
     solar_node: 'Solar Node',
   },
   common: {
+    dark_theme: 'Karanlık Tema',
+    light_theme: 'Aydınlık Tema',
     profile_details: 'Profil Detayı',
     energy_consumption: 'Enerji Tüketimi',
     device_history: 'Cihaz Geçmişi',

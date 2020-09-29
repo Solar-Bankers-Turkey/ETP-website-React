@@ -1,9 +1,37 @@
-:root {
+html {
+  --bg-color-primary: #ffffff;
+  --bg-color-primary-dark: #f0f2f5;
+  --bg-color-primary-darker: #e4e6eb;
+
+  --bg-color-secondary: #f0f2f5;
+  --bg-color-secondary-light: #ffffff;
+
+  --icon-color: #657d95;
+
+  --text-color-primary: #050505;
+  --text-color-secondary: #454545;
+  --text-color-secondary-light: #65676b;
+  --text-color-secondary-dark: #454545;
+
+  --border-color-dark: #000000;
+  --border-color-soft: #0c0a0a25;
+  --border-color-invert: #ffffff;
+  --border-color-invert-soft: #ffffff50;
+
   --primary-color: #1f8efa;
   --primary-color-opacity: #1f8cfac4;
 
+  --warning-color: #ffab4f;
+  --success-color: #05c985;
+
+  --orange: #ffab4f;
+  --green: #05c985;
+  --blue: #1f8efa;
+  --red: #ff4b5c;
+}
+
+html[data-theme='dark'] {
   --bg-color-primary: #242e42;
-  --bg-color-primary-light: #293449;
   --bg-color-primary-dark: #20293c;
   --bg-color-primary-darker: #131a27;
 
@@ -17,16 +45,11 @@
   --text-color-secondary-light: #cfd7db;
   --text-color-secondary-dark: #70889e;
 
-  --warning-color: #ffab4f;
-  --success-color: #05c985;
-
   --border-color-dark: #000000;
   --border-color-soft: #00000025;
   --border-color-invert: #ffffff;
   --border-color-invert-soft: #ffffff50;
 
-  --orange: #ffab4f;
-  --green: #05c985;
-  --blue: #1f8efa;
-  --red: #ff4b5c;
+  --primary-color: #1f8efa;
+  --primary-color-opacity: #1f8cfac4;
 }

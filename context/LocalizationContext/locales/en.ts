@@ -8,6 +8,8 @@ export const en = {
     solar_node: 'Solar Node',
   },
   common: {
+    dark_theme: 'Dark Theme',
+    light_theme: 'Light Theme',
     profile_details: 'Profile Details',
     energy_consumption: 'Energy Consumption',
     device_history: 'Device History',

@@ -24,7 +24,6 @@
 
   transition: background 190ms ease;
   &:hover {
-    background: var(--bg-color-primary-light);
     .right_arrow {
       transform: translateX(8px);
     }
