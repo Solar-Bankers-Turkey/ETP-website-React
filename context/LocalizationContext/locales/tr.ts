@@ -8,6 +8,8 @@ export const tr = {
     solar_node: 'Solar Node',
   },
   common: {
+    profile_details: 'Profil Detayı',
+    energy_consumption: 'Enerji Tüketimi',
     device_history: 'Cihaz Geçmişi',
     payment_methods: 'Ödeme Yöntemleri',
     add_method: 'Yöntem Ekle',
@@ -100,6 +102,7 @@ export const tr = {
     chart_title: 'Battery Usage Over Time',
   },
   solar_page: {
+    solar_panel: 'Güneş Paneli',
     chart_title: 'Energy Production Over Time',
     dc_power_value: 'DC Power Value',
     dc_current_value: 'DC Current Value',

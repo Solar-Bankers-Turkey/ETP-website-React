@@ -8,6 +8,8 @@ export const en = {
     solar_node: 'Solar Node',
   },
   common: {
+    profile_details: 'Profile Details',
+    energy_consumption: 'Energy Consumption',
     device_history: 'Device History',
     payment_methods: 'Payment Methods',
     add_method: 'Add Method',

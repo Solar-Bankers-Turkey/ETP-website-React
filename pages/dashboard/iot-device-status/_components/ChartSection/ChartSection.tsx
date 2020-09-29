@@ -27,7 +27,7 @@ const ChartSection = () => {
     <div className={styles.container}>
       <div className={styles.charts}>
         <div className={styles.charts_header}>
-          <h1>Energy Consumption</h1>
+          <h1>{t.common.energy_consumption}</h1>
           <div className={styles.btn_group}>
             <Button onClick={() => setSelected('day')} variant={selected === 'day' ? 'selected' : 'ghost'}>
               {t.common.day}

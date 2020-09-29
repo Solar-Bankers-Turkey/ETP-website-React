@@ -12,7 +12,11 @@ const ChartSection = ({ title }) => {
     <section className={styles.chart_setion}>
       <h1>{title}</h1>
       <div className={styles.linechart_container}>
-        <CustomLineChart margin={{ top: 20, right: 30, bottom: 70, left: 50 }} dataSeries={mockData} />
+        <CustomLineChart
+          showLegend={false}
+          margin={{ top: 10, right: 30, bottom: 40, left: 50 }}
+          dataSeries={mockData}
+        />
       </div>
     </section>
   )

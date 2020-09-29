@@ -27,12 +27,13 @@ if (typeof window !== 'undefined' && window.localStorage !== null) {
 export const LocalizationContextProvider: React.FC = ({ children }) => {
   const [t, setT] = useState(languages[language])
 
-  const [currentLanguage, setCurrentLanguage] = useState(t)
-  useEffect(() => {
-    setCurrentLanguage(t)
-  }, [t])
-  const changeLanguage = (lang: string) => {}
+  const [currentLanguage, setCurrentLanguage] = useState(language)
 
+  const changeLanguage = (lang: string) => {
+    setT(languages[lang])
+    setCurrentLanguage(lang)
+    window.localStorage.setItem('etp-language', lang)
+  }
   return (
     <LocalizationContext.Provider value={{ t, currentLanguage, changeLanguage }}>
       {children}
