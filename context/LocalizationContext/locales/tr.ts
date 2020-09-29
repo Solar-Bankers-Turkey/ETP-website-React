@@ -10,7 +10,6 @@ export const tr = {
   common: {
     dark_theme: 'Karanlık Tema',
     light_theme: 'Aydınlık Tema',
-    profile_details: 'Profil Detayı',
     energy_consumption: 'Enerji Tüketimi',
     device_history: 'Cihaz Geçmişi',
     payment_methods: 'Ödeme Yöntemleri',

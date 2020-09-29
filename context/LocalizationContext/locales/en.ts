@@ -10,7 +10,6 @@ export const en = {
   common: {
     dark_theme: 'Dark Theme',
     light_theme: 'Light Theme',
-    profile_details: 'Profile Details',
     energy_consumption: 'Energy Consumption',
     device_history: 'Device History',
     payment_methods: 'Payment Methods',
