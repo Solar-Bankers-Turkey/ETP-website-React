@@ -8,7 +8,7 @@ interface Props {
   enablePointLabel?: boolean
   colors?: string[]
   dataSeries: any
-  margin: { top: number; right: number; bottom: number; left: number }
+  margin?: { top: number; right: number; bottom: number; left: number }
   showLegend?: boolean
   lineCurve?:
     | 'basis'
@@ -88,10 +88,10 @@ const CustomLineChart = React.memo(function CustomLineChart({
       axisTop={null}
       axisRight={null}
       axisBottom={{
+        tickRotation: 0,
         orient: 'bottom',
         tickSize: 5,
         tickPadding: 5,
-        tickRotation: 0,
         legendOffset: 36,
         legendPosition: 'middle',
       }}

@@ -97,8 +97,10 @@ export const tr = {
     output_voltage: 'Çıkış Voltage',
     output_current: 'Çıkış Akımı',
     output_freq: 'Çıkış Frekansı',
+    chart_title: 'Battery Usage Over Time',
   },
   solar_page: {
+    chart_title: 'Energy Production Over Time',
     dc_power_value: 'DC Power Value',
     dc_current_value: 'DC Current Value',
     dc_voltage_value: 'DC Voltage Value',

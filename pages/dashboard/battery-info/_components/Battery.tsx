@@ -9,6 +9,8 @@ import BatteryIconTwoColor from './BatteryIconTwoColor'
 import Card from '../../_components/Battery-Solar-Info/Card'
 import CardRow from '../../_components/Battery-Solar-Info/CardRow'
 
+import ChartSection from '../../_components/Battery-Solar-Info/ChartSection'
+
 const Battery = () => {
   const { t } = useLocalizationContext()
   return (
@@ -53,6 +55,8 @@ const Battery = () => {
         <CardRow title={t.battery_page.output_current} value="5.9 A"></CardRow>
         <CardRow title={t.battery_page.output_freq} value="50 Hz"></CardRow>
       </CardRowList>
+
+      <ChartSection title={t.battery_page.chart_title} />
     </div>
   )
 }

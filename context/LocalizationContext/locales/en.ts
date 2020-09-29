@@ -96,8 +96,10 @@ export const en = {
     output_voltage: 'Output Voltage',
     output_current: 'Output Current',
     output_freq: 'Output Frequency',
+    chart_title: 'Battery Usage Over Time',
   },
   solar_page: {
+    chart_title: 'Energy Production Over Time',
     solar_panel: 'Solar Panel',
     dc_power_value: 'DC Power Value',
     dc_current_value: 'DC Current Value',

@@ -1,42 +1,41 @@
 import React from 'react'
-import CustomBarChart from '../../../../../components/Charts/BarChart/CustomBarChart'
 import styles from '../Overview.module.css'
 import { ResponsiveBar } from '@nivo/bar'
 
 const data = [
   {
-    day: 'Monday',
+    day: 'Mon',
     min: 21,
     max: 12,
   },
   {
-    day: 'Tuesday',
+    day: 'Tue',
     min: 21,
     max: 11,
   },
   {
-    day: 'Wednesday',
+    day: 'Wed',
     min: 21,
     max: 10,
   },
   {
-    day: 'Thursday',
+    day: 'Thu',
     min: 21,
     max: 9,
   },
   {
-    day: 'Friday',
+    day: 'Fri',
     min: 21,
     max: 6,
   },
 
   {
-    day: 'Saturday',
+    day: 'Sat',
     min: 21,
     max: 9,
   },
   {
-    day: 'Sunday',
+    day: 'Sun',
     min: 17,
     max: 8,
   },
@@ -54,7 +53,7 @@ const BarChart = () => {
         indexBy="day"
         margin={{ top: 40, right: 0, bottom: 50, left: 40 }}
         padding={0.85}
-        borderRadius={14}
+        borderRadius={5}
         groupMode={'stacked'}
         colors={['transparent', 'var(--primary-color)']}
         enableGridX={false}

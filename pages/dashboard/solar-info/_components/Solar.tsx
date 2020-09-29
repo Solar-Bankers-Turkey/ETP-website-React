@@ -5,6 +5,7 @@ import Card from '../../_components/Battery-Solar-Info/Card'
 import CardList from '../../_components/Battery-Solar-Info/CardList'
 import CardRow from '../../_components/Battery-Solar-Info/CardRow'
 import CardRowList from '../../_components/Battery-Solar-Info/CardRowList'
+import ChartSection from '../../_components/Battery-Solar-Info/ChartSection'
 import PageHeader from '../../_components/PageHeader'
 import styles from './Solar.module.css'
 
@@ -49,20 +50,10 @@ const Solar = () => {
         <CardRow title={t.solar_page.s_phase_current} value="50 Hz"></CardRow>
         <CardRow title={t.solar_page.t_phase_current} value="50 Hz"></CardRow>
       </CardRowList>
+
+      <ChartSection title={t.solar_page.chart_title} />
     </div>
   )
 }
 
 export default Solar
-
-// DC Power value (PV power)
-// DC Current value (PV current)
-// DC Voltage value (PV voltage)
-// R Phase Voltage (output of inverter)
-// S Phase Voltage (output of inverter)
-// T Phase Voltage (output of inverter)
-// R Phase Current (output of inverter)
-// S Phase Current (output of inverter)
-// T Phase Current (output of inverter)
-// Temperature
-// Energy to battery
