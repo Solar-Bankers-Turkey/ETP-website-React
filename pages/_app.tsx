@@ -11,15 +11,21 @@ Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
+const DefaultLayout = ({ children }) => {
+  return <>{children}</>
+}
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
-  const page = router.pathname.split('/')[1]
+  const page = router.pathname
 
   let Layout = DashboardLayout
-  if (page === 'dashboard') {
+  if (page.includes('dashboard')) {
     Layout = DashboardLayout
-  } else {
+  } else if (page.includes('sign')) {
     Layout = AuthLayout
+  } else {
+    Layout = DefaultLayout
   }
 
   return (

@@ -15,7 +15,6 @@ const DashboardLayout = ({ children }) => {
     <div className={styles.container}>
       <div className={isSidebarOpen ? styles.sidebar : styles.sidebar_closed}>
         <Sidebar></Sidebar>
-
         {isSidebarOpen && <SidebarFooter />}
       </div>
 

@@ -13,6 +13,8 @@ const ChartSection = ({ title }) => {
       <h1>{title}</h1>
       <div className={styles.linechart_container}>
         <CustomLineChart
+          lineCurve="monotoneX"
+          enableArea={true}
           showLegend={false}
           margin={{ top: 10, right: 30, bottom: 40, left: 50 }}
           dataSeries={mockData}

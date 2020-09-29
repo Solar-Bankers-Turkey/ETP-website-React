@@ -11,6 +11,7 @@
 }
 
 .right {
+  background: #242e42;
   grid-area: right;
   width: 100%;
   min-height: 100%;
@@ -58,7 +59,7 @@
   left: 2rem;
   & > p {
     text-shadow: 2px 2px 2px black;
-    color: var(--text-color-primary);
+    color: #ffffff;
     font-size: 2rem;
   }
   .text_2 {

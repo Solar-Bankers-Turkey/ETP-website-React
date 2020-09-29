@@ -7,9 +7,9 @@
   padding: 0.75rem;
 
   & > label {
-    color: var(--text-color-primary);
+    color: #ffffff;
     font-size: 0.85rem;
-    color: var(--text-color-secondary-light);
+    color: #cfd7db;
     margin-bottom: 0.25rem;
   }
   & > input {
@@ -19,30 +19,35 @@
     border-radius: 4px;
   }
   & > button {
-    background: var(--primary-color);
-    color: var(--text-color-primary);
+    background: #1f8efa;
+    color: #ffffff;
     height: 36px;
     margin-top: 1rem;
     letter-spacing: 1px;
+    &:hover {
+      background: #3e4e6c;
+    }
   }
 }
 .link_forgot {
+  color: #70889e;
   cursor: pointer;
   margin-top: 3rem;
   text-align: center;
   &:hover {
-    color: var(--primary-color);
+    color: #1f8efa;
   }
 }
 .link_signup {
+  color: #70889e;
   display: block;
   cursor: pointer;
   margin-top: 1rem;
   text-align: center;
   &:hover {
-    color: var(--primary-color);
+    color: #1f8efa;
   }
   & > span {
-    color: var(--primary-color);
+    color: #1f8efa;
   }
 }

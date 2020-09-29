@@ -1,4 +1,6 @@
-import LoginForm from '../components/Layouts/Auth/LoginForm'
+import React from 'react'
+import HomePage from './_components/Home/HomePage'
+
 export default function Home() {
-  return <LoginForm />
+  return <HomePage />
 }
