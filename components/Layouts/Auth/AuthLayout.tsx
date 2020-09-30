@@ -8,7 +8,7 @@ const AuthLayout = ({ children }) => {
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.video_container}>
-          <video autoPlay muted loop id="System.mp4">
+          <video preload="none" autoPlay muted loop id="System.mp4">
             <source src="/System.mp4" type="video/mp4" />
           </video>
           <div className={styles.text_group}>

@@ -9,7 +9,7 @@
   white-space: nowrap;
   color: var(--text-color-primary);
   & > span {
-    color: yellow;
+    color: var(--warning-color);
   }
 }
 

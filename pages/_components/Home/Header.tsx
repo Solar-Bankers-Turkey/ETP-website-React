@@ -2,6 +2,7 @@ import React from 'react'
 
 import cx from 'classnames'
 import styles from './Header.module.css'
+import Link from 'next/link'
 
 const Header = () => {
   return (
@@ -24,7 +25,9 @@ const Header = () => {
             <a href="#contact">Contact</a>
           </li>
           <li className={styles.solid}>
-            <a>Get Started</a>
+            <Link href="/signin">
+              <a>Get Started</a>
+            </Link>
           </li>
         </ul>
       </nav>
