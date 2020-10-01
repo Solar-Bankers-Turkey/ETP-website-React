@@ -24,7 +24,8 @@
     align-items: center;
     flex-wrap: wrap;
     & > img {
-      min-width: 600px;
+      display: block;
+      max-width: 60%;
     }
     & > div {
       width: 460px;
@@ -42,6 +43,25 @@
         line-height: 1.5;
         margin-top: 0.5rem;
       }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .about {
+    & > span {
+      text-align: center;
+    }
+  }
+  .image_with_text {
+    & > img {
+      margin-top: -2rem;
+      margin-bottom: 3rem;
+      max-width: 345px !important;
+    }
+
+    & > div {
+      margin: 0 1rem;
     }
   }
 }

@@ -6,3 +6,24 @@
     scroll-behavior: smooth;
   }
 }
+.logo {
+  position: absolute;
+  z-index: 100;
+  top: 5rem;
+  left: 2rem;
+  min-width: 300px;
+  max-width: 300px;
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    min-width: 200px;
+    max-width: 200px;
+    top: 1rem;
+    left: 28%;
+  }
+}

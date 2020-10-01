@@ -8,6 +8,11 @@ const Hero = () => {
     <section className={styles.container} id="home">
       <div className={styles.carousel}>
         <div className={styles.img_container}>
+          <h1 className={styles.slogan}>
+            <span>An Easy Way</span>
+            <h1>to Buy and Sell</h1>
+            <h1>Electricity</h1>
+          </h1>
           <img src="/images/carousel2.jpg" title="women with battery"></img>
         </div>
       </div>

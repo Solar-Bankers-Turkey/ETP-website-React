@@ -9,9 +9,6 @@ const Header = () => {
     <header className={styles.container}>
       <nav className={styles.nav}>
         <ul className={styles.list}>
-          <li className={styles.logo}>
-            <img src="/logo/solar-bankers-logo.png" alt="Solar Bankers Logo" />
-          </li>
           <li className={styles.list_item}>
             <a href="#home">Home</a>
           </li>
