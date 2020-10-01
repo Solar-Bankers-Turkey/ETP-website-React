@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Home.module.css'
+import styles from './Why.module.css'
 const Why = () => {
   return (
     <section className={styles.why} id="why">

@@ -1,0 +1,80 @@
+.container {
+  box-shadow: inset 0 1px 0 0 var(--border-color-soft);
+  height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin-top: 1rem;
+    font-size: 13px;
+    color: #8c98a4;
+    text-align: center;
+  }
+}
+
+.social_links_container {
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social_link {
+  transition: color, background-color 0.2s ease-in-out;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+
+  & > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & > a > svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  margin-right: 1rem;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.facebook {
+  color: #3b5998;
+  &:hover {
+    background-color: #3b5998;
+    color: #ffffff;
+  }
+}
+.twitter {
+  color: #1da1f2;
+  &:hover {
+    background-color: #1da1f2;
+    color: #ffffff;
+  }
+}
+.telegram {
+  color: #0088cc;
+  &:hover {
+    background-color: #0088cc;
+    color: #ffffff;
+  }
+}
+
+.linkedin {
+  color: #2867b2;
+  &:hover {
+    background-color: #2867b2;
+    color: #ffffff;
+  }
+}

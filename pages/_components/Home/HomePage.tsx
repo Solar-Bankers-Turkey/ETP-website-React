@@ -3,9 +3,10 @@ import About from './About'
 import Contact from './Contact'
 import Header from './Header'
 import Hero from './Hero'
+import Why from './Why'
 
 import styles from './Home.module.css'
-import Why from './Why'
+import Footer from './Footer'
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <About />
       <Why />
       <Contact />
+      <Footer />
     </div>
   )
 }
