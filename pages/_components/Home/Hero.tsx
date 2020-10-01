@@ -13,7 +13,7 @@ const Hero = () => {
             <h1>to Buy and Sell</h1>
             <h1>Electricity</h1>
           </h1>
-          <img src="/images/carousel2.jpg" title="women with battery"></img>
+          <img src="/images/carousel2.webp" title="women with battery"></img>
         </div>
       </div>
 
