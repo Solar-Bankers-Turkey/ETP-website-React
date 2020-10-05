@@ -16,11 +16,13 @@
 .carousel {
   height: 760px;
   width: 100%;
+  overflow: hidden;
 }
 .img_container {
   background: white;
   height: 760px;
   width: 100%;
+
   & > img {
     background: white;
     display: block;
@@ -34,6 +36,7 @@
   }
 }
 .slogan {
+  text-align: left;
   position: absolute;
   top: 40%;
   left: 10%;
@@ -43,6 +46,22 @@
 
   & > span {
     font-weight: 600;
+  }
+}
+.slogan2 {
+  text-align: left;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: #ffffff;
+  font-size: 3rem;
+  text-shadow: 1px 2px 3px black;
+
+  & > * > span {
+    font-weight: 600;
+  }
+  & > h2 {
+    font-size: 1.5rem;
   }
 }
 .get_started_buttons {

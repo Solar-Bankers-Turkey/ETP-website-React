@@ -4,6 +4,7 @@ import DashboardLayout from '../components/Layouts/Dashboard/DashboardLayout'
 import Router, { useRouter } from 'next/router'
 import NProgress from 'nprogress' //nprogress module
 import 'nprogress/nprogress.css' //styles of nprogress
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import AuthLayout from '../components/Layouts/Auth/AuthLayout'
 import { LocalizationContextProvider } from '../context/LocalizationContext/LocalizationContext'
 
