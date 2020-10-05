@@ -128,7 +128,7 @@ export const en = {
     carousel2_p1: 'Welcome to',
     carousel2_p2: 'Energy Trading Platform',
     carousel2_p3: 'by Solar Bankers',
-    get_started_prosumer: 'Get started as a Crosumer',
+    get_started_prosumer: 'Get started as a Prosumer',
     get_started_prosumer_desc: 'Manage your Electricity and sell your Extra Easily',
     get_started_consumer: 'Get started as a Consumer',
     get_started_consumer_desc: 'Manage your Electricity Easily',
