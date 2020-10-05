@@ -2,9 +2,6 @@
   color: #ffffff;
   background: #ffffff;
   width: 100%;
-  html {
-    scroll-behavior: smooth;
-  }
 }
 .logo {
   position: absolute;

@@ -58,6 +58,37 @@
   }
 }
 
+.language_icon {
+  margin-left: -1rem;
+  margin-right: 1rem;
+  height: 45px;
+
+  & > details {
+    height: 100%;
+    color: #272e42;
+
+    & > summary {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 45px;
+    }
+    & > summary > svg {
+      margin-top: 4px;
+      width: 32px;
+      height: 32px;
+    }
+
+    & > ul {
+      background: #ecedf0;
+    }
+  }
+
+  & > :hover {
+    color: #1f8efa;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     display: none;

@@ -2,8 +2,10 @@ import Link from 'next/link'
 import React from 'react'
 import styles from './Hero.module.css'
 import CarouselComponent from './CarouselComponent'
+import { useLocalizationContext } from '../../../context/LocalizationContext/LocalizationContext'
 
 const Hero = () => {
+  const { t } = useLocalizationContext()
   return (
     <section className={styles.container} id="home">
       <div className={styles.carousel}>
@@ -14,16 +16,16 @@ const Hero = () => {
         <div className={styles.left}>
           <Link href="/signup">
             <a>
-              <h1>Get Started as a prosumer</h1>
-              <h2>Manage your Electricity and sell your Extra Easily</h2>
+              <h1>{t.homePage.get_started_prosumer}</h1>
+              <h2>{t.homePage.get_started_prosumer_desc}</h2>
             </a>
           </Link>
         </div>
         <div className={styles.right}>
           <Link href="/signup">
             <a>
-              <h1>Get Started as a Consumer</h1>
-              <h2>Manage your Electricity Easily</h2>
+              <h1>{t.homePage.get_started_consumer}</h1>
+              <h2>{t.homePage.get_started_consumer_desc}</h2>
             </a>
           </Link>
         </div>
