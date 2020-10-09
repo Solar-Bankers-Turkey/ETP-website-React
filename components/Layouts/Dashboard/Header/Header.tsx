@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
+import Link from 'next/link'
 
 import styles from './Header.module.css'
+import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
 import BarsIcon from '../../../Icons/BarsIcon'
 import MailIcon from '../../../Icons/MailIcon'
 import BellIcon from '../../../Icons/BellIcon'
 import IconButton from '../../../Button/IconButton'
 
-import { useLocalizationContext } from '../../../../context/LocalizationContext/LocalizationContext'
 import HeaderInfo from './HeaderInfo'
 import HeaderInfoFloating from './HeaderInfoFloating'
 import Dropdown from '../../../Dropdown/Dropdown'
@@ -66,9 +67,15 @@ const Header = ({ sidebarToggleHandler }) => {
             <div className={styles.btn_username}>{t.common.hello},&nbsp;Username</div>
           </DropdownButton>
           <DropdownMenu>
-            <DropdownItem>Profile</DropdownItem>
-            <DropdownItem>Settings</DropdownItem>
-            <DropdownItem>Log Out</DropdownItem>
+            <Link href="/dashboard/settings/profile">
+              <DropdownItem>Profile</DropdownItem>
+            </Link>
+            <Link href="/dashboard/settings">
+              <DropdownItem>Settings</DropdownItem>
+            </Link>
+            <Link href="/signin">
+              <DropdownItem>Log Out</DropdownItem>
+            </Link>
           </DropdownMenu>
         </Dropdown>
       </div>

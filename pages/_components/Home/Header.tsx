@@ -12,11 +12,9 @@ import DropdownItem from '../../../components/Dropdown/DropdownItem'
 
 const Header = () => {
   const { t, changeLanguage } = useLocalizationContext()
-  const btnChangeLanguageRef = useRef(null) as React.MutableRefObject<HTMLElement>
 
   const changeLanguageHandler = (lang: string) => {
     changeLanguage(lang)
-    btnChangeLanguageRef.current.click()
   }
   return (
     <header className={styles.container}>
@@ -41,8 +39,7 @@ const Header = () => {
           </li>
           <li className={cx(styles.list_item, styles.language_icon)}>
             <Dropdown>
-              {/* @ts-ignore */}
-              <DropdownButton ref={btnChangeLanguageRef}>
+              <DropdownButton>
                 <LanguageIcon />
               </DropdownButton>
               <DropdownMenu offsetRight={-50}>
