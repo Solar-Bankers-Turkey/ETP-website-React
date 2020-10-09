@@ -116,9 +116,19 @@
   }
 }
 @media (max-width: 480px) {
+  .get_started_buttons {
+    padding: 0.25rem;
+    & > div {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .container,
+  .carousel {
+    height: max-content;
+  }
   .img_container {
     width: 375px !important;
-    height: 520px !important;
+    height: 540px !important;
     & > img {
       background-repeat: no-repeat;
       object-fit: cover;
@@ -130,7 +140,7 @@
     font-size: 2rem;
   }
   .container::before {
-    top: 0px;
-    height: 520px;
+    display: none;
+    object-fit: fill;
   }
 }

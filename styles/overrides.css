@@ -16,3 +16,8 @@
 tspan {
   font-size: 12px;
 }
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}

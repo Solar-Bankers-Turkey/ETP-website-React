@@ -13,22 +13,22 @@ const Hero = () => {
       </div>
 
       <div className={styles.get_started_buttons}>
-        <div className={styles.left}>
-          <Link href="/signup">
+        <Link href="/signup">
+          <div className={styles.left}>
             <a>
               <h1>{t.homePage.get_started_prosumer}</h1>
               <h2>{t.homePage.get_started_prosumer_desc}</h2>
             </a>
-          </Link>
-        </div>
-        <div className={styles.right}>
-          <Link href="/signup">
+          </div>
+        </Link>
+        <Link href="/signup">
+          <div className={styles.right}>
             <a>
               <h1>{t.homePage.get_started_consumer}</h1>
               <h2>{t.homePage.get_started_consumer_desc}</h2>
             </a>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </section>
   )
