@@ -17,12 +17,13 @@ yarn dev
 
 Export
 
+Uygulama FTP'ye yüklenmek istendiği için, Next.JS'in SSR özellikleri kullanılmadı. Komutu çalıştırdıktan sonra out
+klasörünü FTP'ye yükleyebilsiniz.
 ```bash
 build-export
 ```
 
-Uygulama FTP'ye yüklenmek istendiği için, Next.JS'in SSR özellikleri kullanılmadı. Komutu çalıştırdıktan sonra out
-klasörünü FTP'ye yükleyebilsiniz.
+
 
 Tüm sayfaların(/pages) kendi component klasör'ü var. ortak özellikleri olanlar /components klasöründen paylaşıyorlar.
 
